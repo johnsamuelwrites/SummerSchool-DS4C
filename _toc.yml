@@ -1,0 +1,12 @@
+format: jb-book
+root: README
+parts: 
+- caption: Exercises
+  numbered: false
+  chapters:
+  - file: README.md
+  - file: practical1/practical1.ipynb
+  - file: practical2/practical2.ipynb
+  - file: practical3/practical3.ipynb
+  - file: practical4/practical4.ipynb
+  - file: examples/Examples.ipynb

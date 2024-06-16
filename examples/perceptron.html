@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installation of Packages &#8212; My Jupyter Book</title>
+    <title>Installation of Packages &#8212; Data Science for Chemists</title>
   
   
   
@@ -60,6 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/perceptron';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Mining Examples" href="README.html" />
+    <link rel="prev" title="Installation of Packages" href="mlp.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -147,7 +147,7 @@
   
   
   
-    <p class="title logo__title">My Jupyter Book</p>
+    <p class="title logo__title">Data Science for Chemists</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -177,7 +177,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../practical2/practical2.html">Programming Session 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../practical3/practical3.html">Programming Session 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../practical4/practical4.html">Programming Session 4</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Examples</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="decisiontree.html">Installation of Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interaction.html">Using ipywidgets for user interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp.html">Installation of Packages</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation of Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Data Mining Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recommendation.html">Recommendation System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rfc.html">Installation of Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="svm.html">Installation of Packages</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Tools and libraries</a></li>
+
+
 
 
 </ul>
@@ -365,19 +384,19 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (2.0.0)
 Requirement already satisfied: scikit-learn in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (1.5.0)
-Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (3.9.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy&gt;=1.6.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.13.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (3.9.0)
+Requirement already satisfied: scipy&gt;=1.6.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.13.1)
 Requirement already satisfied: joblib&gt;=1.2.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.4.2)
 Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (3.5.0)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (1.2.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (1.2.1)
 Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (0.12.1)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (4.53.0)
 Requirement already satisfied: kiwisolver&gt;=1.3.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (1.4.5)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (24.1)
+Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (24.1)
 Requirement already satisfied: pillow&gt;=8 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (10.3.0)
 Requirement already satisfied: pyparsing&gt;=2.3.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (3.1.2)
 Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (2.9.0.post0)
@@ -1048,7 +1067,7 @@ weighted avg       0.96      0.96      0.96        45
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f1cf1d9b610&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f523c48b5e0&gt;
 </pre></div>
 </div>
 <img alt="../_images/3c1ed561856f59b2452e2017f84bbbc8c5963d7462f9c0485f2fb6854d5736bf.png" src="../_images/3c1ed561856f59b2452e2017f84bbbc8c5963d7462f9c0485f2fb6854d5736bf.png" />
@@ -1063,7 +1082,7 @@ weighted avg       0.96      0.96      0.96        45
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f1cf1d30a90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f523e573310&gt;
 </pre></div>
 </div>
 <img alt="../_images/98941aef97b457dfe3e1402c3a2a0d7b2b136daad32baf5d45744bce1ae8f848.png" src="../_images/98941aef97b457dfe3e1402c3a2a0d7b2b136daad32baf5d45744bce1ae8f848.png" />
@@ -1113,6 +1132,24 @@ weighted avg       0.96      0.96      0.96        45
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="mlp.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Installation of Packages</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data Mining Examples</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1157,7 +1194,7 @@ weighted avg       0.96      0.96      0.96        45
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book community
+By John Samuel
 </p>
 
   </div>

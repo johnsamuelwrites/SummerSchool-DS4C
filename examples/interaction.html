@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Using ipywidgets for user interaction &#8212; My Jupyter Book</title>
+    <title>Using ipywidgets for user interaction &#8212; Data Science for Chemists</title>
   
   
   
@@ -60,6 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/interaction';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installation of Packages" href="mlp.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="Examples-Visualization.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -147,7 +147,7 @@
   
   
   
-    <p class="title logo__title">My Jupyter Book</p>
+    <p class="title logo__title">Data Science for Chemists</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -177,7 +177,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../practical2/practical2.html">Programming Session 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../practical3/practical3.html">Programming Session 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../practical4/practical4.html">Programming Session 4</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Examples</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="decisiontree.html">Installation of Packages</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Using ipywidgets for user interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp.html">Installation of Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perceptron.html">Installation of Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Data Mining Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recommendation.html">Recommendation System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rfc.html">Installation of Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="svm.html">Installation of Packages</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Tools and libraries</a></li>
+
+
 
 
 </ul>
@@ -358,16 +377,16 @@ document.write(`
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading ipywidgets-8.1.3-py3-none-any.whl.metadata (2.4 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: comm&gt;=0.1.3 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from ipywidgets) (0.2.2)
+Requirement already satisfied: comm&gt;=0.1.3 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from ipywidgets) (0.2.2)
 Requirement already satisfied: ipython&gt;=6.1.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from ipywidgets) (8.25.0)
 Requirement already satisfied: traitlets&gt;=4.3.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from ipywidgets) (5.14.3)
-Collecting widgetsnbextension~=4.0.11 (from ipywidgets)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading widgetsnbextension-4.0.11-py3-none-any.whl.metadata (1.6 kB)
-Collecting jupyterlab-widgets~=3.0.11 (from ipywidgets)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting widgetsnbextension~=4.0.11 (from ipywidgets)
+  Downloading widgetsnbextension-4.0.11-py3-none-any.whl.metadata (1.6 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jupyterlab-widgets~=3.0.11 (from ipywidgets)
   Downloading jupyterlab_widgets-3.0.11-py3-none-any.whl.metadata (4.1 kB)
 </pre></div>
 </div>
@@ -380,31 +399,28 @@ Requirement already satisfied: stack-data in /opt/hostedtoolcache/Python/3.10.14
 Requirement already satisfied: exceptiongroup in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets) (1.2.1)
 Requirement already satisfied: typing-extensions&gt;=4.6 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets) (4.12.2)
 Requirement already satisfied: pexpect&gt;4.3 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from ipython&gt;=6.1.0-&gt;ipywidgets) (4.9.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from jedi&gt;=0.16-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (0.8.4)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from jedi&gt;=0.16-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (0.8.4)
 Requirement already satisfied: ptyprocess&gt;=0.5 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pexpect&gt;4.3-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (0.7.0)
 Requirement already satisfied: wcwidth in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from prompt-toolkit&lt;3.1.0,&gt;=3.0.41-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (0.2.13)
-Requirement already satisfied: executing&gt;=1.2.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (2.0.1)
-Requirement already satisfied: asttokens&gt;=2.1.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (2.4.1)
-Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (0.2.2)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.12.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from asttokens&gt;=2.1.0-&gt;stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (1.16.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: executing&gt;=1.2.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (2.0.1)
+Requirement already satisfied: asttokens&gt;=2.1.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (2.4.1)
+Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (0.2.2)
+Requirement already satisfied: six&gt;=1.12.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from asttokens&gt;=2.1.0-&gt;stack-data-&gt;ipython&gt;=6.1.0-&gt;ipywidgets) (1.16.0)
 Downloading ipywidgets-8.1.3-py3-none-any.whl (139 kB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/139.4 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">139.4/139.4 kB</span> <span class=" -Color -Color-Red">7.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">139.4/139.4 kB</span> <span class=" -Color -Color-Red">10.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hDownloading jupyterlab_widgets-3.0.11-py3-none-any.whl (214 kB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/214.4 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">214.4/214.4 kB</span> <span class=" -Color -Color-Red">25.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">214.4/214.4 kB</span> <span class=" -Color -Color-Red">53.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hDownloading widgetsnbextension-4.0.11-py3-none-any.whl (2.3 MB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/2.3 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.2/2.3 MB</span> <span class=" -Color -Color-Red">37.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.3/2.3 MB</span> <span class=" -Color -Color-Red">34.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.3/2.3 MB</span> <span class=" -Color -Color-Red">105.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
@@ -553,6 +569,24 @@ Downloading ipywidgets-8.1.3-py3-none-any.whl (139 kB)
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Examples-Visualization.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="mlp.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installation of Packages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -587,7 +621,7 @@ Downloading ipywidgets-8.1.3-py3-none-any.whl (139 kB)
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book community
+By John Samuel
 </p>
 
   </div>

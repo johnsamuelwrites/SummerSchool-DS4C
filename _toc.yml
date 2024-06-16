@@ -11,13 +11,13 @@ parts:
 - caption: Additional Examples
   numbered: false
   chapters:
+  - file: examples/README.md
   - file: examples/Examples.ipynb
   - file: examples/decisiontree.ipynb
   - file: examples/Examples-Visualization.ipynb
   - file: examples/interaction.ipynb
   - file: examples/mlp.ipynb
   - file: examples/perceptron.ipynb
-  - file: examples/README.md
   - file: examples/recommendation.ipynb
   - file: examples/rfc.ipynb
   - file: examples/svm.ipynb

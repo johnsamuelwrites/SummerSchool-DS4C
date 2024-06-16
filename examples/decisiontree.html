@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installation of Packages &#8212; Data Science for Chemists</title>
+    <title>Decision Tree &#8212; Data Science for Chemists</title>
   
   
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples/decisiontree';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="Examples-Visualization.html" />
-    <link rel="prev" title="Examples" href="Examples.html" />
+    <link rel="next" title="Data Visualization - Geo" href="Examples-Visualization.html" />
+    <link rel="prev" title="Complex Numbers, Mean, and Classification" href="Examples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,17 +180,18 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Examples</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
-
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation of Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interaction.html">Using ipywidgets for user interaction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mlp.html">Installation of Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="perceptron.html">Installation of Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="README.html">Data Mining Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Complex Numbers, Mean, and Classification</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Decision Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples-Visualization.html">Data Visualization - Geo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interaction.html">Using ipywidgets for user interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp.html">Multilayer Perceptron - Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perceptron.html">Perceptron - Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recommendation.html">Recommendation System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rfc.html">Installation of Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="svm.html">Installation of Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rfc.html">Random Forest Tree - Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="svm.html">Support Vector Machines - Classification</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -337,7 +338,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installation of Packages</h1>
+    <h1>Decision Tree</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -347,6 +348,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-of-packages">Installation of Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importation-of-packages">Importation of packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset">Load Dataset</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-the-dataset">Description of the Dataset</a><ul class="nav section-nav flex-column">
@@ -373,8 +375,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="installation-of-packages">
-<h1>Installation of Packages<a class="headerlink" href="#installation-of-packages" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="decision-tree">
+<h1>Decision Tree<a class="headerlink" href="#decision-tree" title="Link to this heading">#</a></h1>
+<section id="installation-of-packages">
+<h2>Installation of Packages<a class="headerlink" href="#installation-of-packages" title="Link to this heading">#</a></h2>
 <p>First install packages like numpy, scikit-learn, matplotlib</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -394,10 +398,11 @@ Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.10.14
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading graphviz-0.20.3-py3-none-any.whl.metadata (12 kB)
 Collecting pydotplus
   Downloading pydotplus-2.0.2.tar.gz (278 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/278.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+?25l
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">278.7/278.7 kB</span> <span class=" -Color -Color-Red">13.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/278.7 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">278.7/278.7 kB</span> <span class=" -Color -Color-Red">13.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25h
 </pre></div>
 </div>
@@ -405,10 +410,10 @@ Collecting pydotplus
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
+?25hRequirement already satisfied: scipy&gt;=1.6.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.13.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hRequirement already satisfied: scipy&gt;=1.6.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.13.1)
-Requirement already satisfied: joblib&gt;=1.2.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.4.2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: joblib&gt;=1.2.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.4.2)
 Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (3.5.0)
 Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (1.2.1)
 Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (0.12.1)
@@ -421,11 +426,9 @@ Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/hostedtoolcache/P
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading graphviz-0.20.3-py3-none-any.whl (47 kB)
+Downloading graphviz-0.20.3-py3-none-any.whl (47 kB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/47.1 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">47.1/47.1 kB</span> <span class=" -Color -Color-Red">2.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">47.1/47.1 kB</span> <span class=" -Color -Color-Red">9.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
 ?25hBuilding wheels for collected packages: pydotplus
 </pre></div>
 </div>
@@ -435,11 +438,8 @@ Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/hostedtoolcache/P
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for pydotplus: filename=pydotplus-2.0.2-py3-none-any.whl size=24552 sha256=aa4c20372943b8928c72d414d2a52772320af2f00c29131d16f68b9a32695038
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> | done
+?25h  Created wheel for pydotplus: filename=pydotplus-2.0.2-py3-none-any.whl size=24552 sha256=54b091b2bc21e7c751a8531f8025e64c675c869d3d50c2b379e5a85bcf702313
   Stored in directory: /home/runner/.cache/pip/wheels/69/b2/67/08f0eef649af92df772c09f451558298e07fab1bc7cdf33db0
 Successfully built pydotplus
 </pre></div>
@@ -452,6 +452,7 @@ Successfully built pydotplus
 </div>
 </div>
 </div>
+</section>
 <section id="importation-of-packages">
 <h2>Importation of packages<a class="headerlink" href="#importation-of-packages" title="Link to this heading">#</a></h2>
 <p>We import the necessary packages</p>
@@ -1112,13 +1113,13 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           0       1.00      0.94      0.97        18
-           1       0.91      0.95      0.93        21
+           0       0.89      0.94      0.92        18
+           1       0.95      0.90      0.93        21
            2       0.93      0.93      0.93        15
 
-    accuracy                           0.94        54
-   macro avg       0.95      0.94      0.94        54
-weighted avg       0.95      0.94      0.94        54
+    accuracy                           0.93        54
+   macro avg       0.93      0.93      0.93        54
+weighted avg       0.93      0.93      0.93        54
 </pre></div>
 </div>
 </div>
@@ -1135,10 +1136,10 @@ weighted avg       0.95      0.94      0.94        54
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f5d0cbaa560&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f4c9433be20&gt;
 </pre></div>
 </div>
-<img alt="../_images/e99a43de7db699e97cdee14f3d729133cc47c26041268993b0a27ac6a369eacd.png" src="../_images/e99a43de7db699e97cdee14f3d729133cc47c26041268993b0a27ac6a369eacd.png" />
+<img alt="../_images/abf83fe13a1afebedb66004631b2b1dbbeda41481cb0f7fd3345bdd06994f4f9.png" src="../_images/abf83fe13a1afebedb66004631b2b1dbbeda41481cb0f7fd3345bdd06994f4f9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1150,10 +1151,10 @@ weighted avg       0.95      0.94      0.94        54
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f5d09a791e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f4c943f2590&gt;
 </pre></div>
 </div>
-<img alt="../_images/c62400c438c875468f17983b9dfd191bf591b12d3d413bbbfe0733216c7a00dd.png" src="../_images/c62400c438c875468f17983b9dfd191bf591b12d3d413bbbfe0733216c7a00dd.png" />
+<img alt="../_images/0c08c4ab2e979cf7eca50a7224ecfc528f2f9fcefc6479e6263779d755bb8060.png" src="../_images/0c08c4ab2e979cf7eca50a7224ecfc528f2f9fcefc6479e6263779d755bb8060.png" />
 </div>
 </div>
 </section>
@@ -1264,7 +1265,7 @@ weighted avg       0.95      0.94      0.94        54
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Examples</p>
+        <p class="prev-next-title">Complex Numbers, Mean, and Classification</p>
       </div>
     </a>
     <a class="right-next"
@@ -1272,7 +1273,7 @@ weighted avg       0.95      0.94      0.94        54
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Data Visualization - Geo</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1292,6 +1293,7 @@ weighted avg       0.95      0.94      0.94        54
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-of-packages">Installation of Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importation-of-packages">Importation of packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset">Load Dataset</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-the-dataset">Description of the Dataset</a><ul class="nav section-nav flex-column">

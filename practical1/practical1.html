@@ -180,17 +180,18 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Examples</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../examples/Examples.html">Examples</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../examples/decisiontree.html">Installation of Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/interaction.html">Using ipywidgets for user interaction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/mlp.html">Installation of Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/perceptron.html">Installation of Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/README.html">Data Mining Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/Examples.html">Complex Numbers, Mean, and Classification</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../examples/decisiontree.html">Decision Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/Examples-Visualization.html">Data Visualization - Geo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/interaction.html">Using ipywidgets for user interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/mlp.html">Multilayer Perceptron - Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/perceptron.html">Perceptron - Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/recommendation.html">Recommendation System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/rfc.html">Installation of Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/svm.html">Installation of Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/rfc.html">Random Forest Tree - Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/svm.html">Support Vector Machines - Classification</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -1552,9 +1553,6 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-4 -4 -4 -4]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1579,6 +1577,9 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[20 24 28 32]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1619,9 +1620,6 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1815,7 +1813,7 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.27234999948238636
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9634397516904077
 </pre></div>
 </div>
 </div>
@@ -1828,7 +1826,7 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1153592]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.55704619]
 </pre></div>
 </div>
 </div>
@@ -1841,8 +1839,8 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.38609979 0.76925226 0.92993526 0.583021   0.18607031]
- [0.73688823 0.3662696  0.81721195 0.20264686 0.99286884]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.37307907 0.48826208 0.01308519 0.02438716 0.86331248]
+ [0.29625181 0.25243512 0.20116022 0.5349279  0.29163241]]
 </pre></div>
 </div>
 </div>
@@ -1855,13 +1853,13 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[0.51296003 0.2345763  0.24589776]
-  [0.07125653 0.16113273 0.13253318]
-  [0.19277902 0.37415798 0.93129158]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[0.74817045 0.41296475 0.50295794]
+  [0.43388331 0.42974438 0.75288852]
+  [0.94272938 0.07985372 0.60808339]]
 
- [[0.05350453 0.61264472 0.38361309]
-  [0.21616684 0.42692921 0.94336233]
-  [0.92242029 0.72764069 0.39772526]]]
+ [[0.1391591  0.87918471 0.38243832]
+  [0.48909588 0.83206673 0.90528169]
+  [0.58888077 0.98918025 0.68969829]]]
 </pre></div>
 </div>
 </div>

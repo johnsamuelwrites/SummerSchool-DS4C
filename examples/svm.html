@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installation of Packages &#8212; Data Science for Chemists</title>
+    <title>Support Vector Machines - Classification &#8212; Data Science for Chemists</title>
   
   
   
@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Tools and libraries" href="../references.html" />
-    <link rel="prev" title="Installation of Packages" href="rfc.html" />
+    <link rel="prev" title="Random Forest Tree - Classification" href="rfc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,17 +180,18 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Examples</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="decisiontree.html">Installation of Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interaction.html">Using ipywidgets for user interaction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mlp.html">Installation of Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="perceptron.html">Installation of Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="README.html">Data Mining Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Complex Numbers, Mean, and Classification</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="decisiontree.html">Decision Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples-Visualization.html">Data Visualization - Geo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interaction.html">Using ipywidgets for user interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlp.html">Multilayer Perceptron - Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perceptron.html">Perceptron - Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="recommendation.html">Recommendation System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rfc.html">Installation of Packages</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation of Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rfc.html">Random Forest Tree - Classification</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Support Vector Machines - Classification</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -337,7 +338,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installation of Packages</h1>
+    <h1>Support Vector Machines - Classification</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -347,6 +348,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-of-packages">Installation of Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importation-of-packages">Importation of packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset">Load Dataset</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-the-dataset">Description of the Dataset</a><ul class="nav section-nav flex-column">
@@ -372,8 +374,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="installation-of-packages">
-<h1>Installation of Packages<a class="headerlink" href="#installation-of-packages" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="support-vector-machines-classification">
+<h1>Support Vector Machines - Classification<a class="headerlink" href="#support-vector-machines-classification" title="Link to this heading">#</a></h1>
+<section id="installation-of-packages">
+<h2>Installation of Packages<a class="headerlink" href="#installation-of-packages" title="Link to this heading">#</a></h2>
 <p>First install packages like numpy, scikit-learn, matplotlib</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -385,9 +389,7 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (2.0.0)
 Requirement already satisfied: scikit-learn in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (1.5.0)
 Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (3.9.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy&gt;=1.6.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.13.1)
+Requirement already satisfied: scipy&gt;=1.6.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.13.1)
 Requirement already satisfied: joblib&gt;=1.2.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (1.4.2)
 Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from scikit-learn) (3.5.0)
 </pre></div>
@@ -407,6 +409,7 @@ Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/hostedtoolcache/P
 </div>
 </div>
 </div>
+</section>
 <section id="importation-of-packages">
 <h2>Importation of packages<a class="headerlink" href="#importation-of-packages" title="Link to this heading">#</a></h2>
 <p>We import the necessary packages</p>
@@ -1086,7 +1089,7 @@ weighted avg       0.96      0.96      0.96       171
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7fd890374250&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f07fd37f520&gt;
 </pre></div>
 </div>
 <img alt="../_images/ec386d9e7440ad16136e72be5f57920929dd7b561b4322de96624a38df3fa0a3.png" src="../_images/ec386d9e7440ad16136e72be5f57920929dd7b561b4322de96624a38df3fa0a3.png" />
@@ -1101,7 +1104,7 @@ weighted avg       0.96      0.96      0.96       171
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7fd8934e5f90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7f07fd39f3a0&gt;
 </pre></div>
 </div>
 <img alt="../_images/5dbd36545cc01f85be8d92e308795a6d6ce7f62ddbbbbd1b683fdf16ece7cf11.png" src="../_images/5dbd36545cc01f85be8d92e308795a6d6ce7f62ddbbbbd1b683fdf16ece7cf11.png" />
@@ -1158,7 +1161,7 @@ weighted avg       0.96      0.96      0.96       171
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installation of Packages</p>
+        <p class="prev-next-title">Random Forest Tree - Classification</p>
       </div>
     </a>
     <a class="right-next"
@@ -1186,6 +1189,7 @@ weighted avg       0.96      0.96      0.96       171
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-of-packages">Installation of Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importation-of-packages">Importation of packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-dataset">Load Dataset</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-the-dataset">Description of the Dataset</a><ul class="nav section-nav flex-column">

@@ -583,7 +583,7 @@ plot this multi-annual population.</p>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/population.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../data/population.csv&quot;</span><span class="p">,</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;population&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;i4&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
@@ -596,56 +596,10 @@ plot this multi-annual population.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="s2">&quot;../../data/population.csv&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;population&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;i4&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">)},</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;population&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py:1380,</span> in <span class="ni">loadtxt</span><span class="nt">(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1377</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">delimiter</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1378</span>     <span class="n">delimiter</span> <span class="o">=</span> <span class="n">delimiter</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1380</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">_read</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="n">comment</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delimiter</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1381</span>             <span class="n">converters</span><span class="o">=</span><span class="n">converters</span><span class="p">,</span> <span class="n">skiplines</span><span class="o">=</span><span class="n">skiprows</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">usecols</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1382</span>             <span class="n">unpack</span><span class="o">=</span><span class="n">unpack</span><span class="p">,</span> <span class="n">ndmin</span><span class="o">=</span><span class="n">ndmin</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1383</span>             <span class="n">max_rows</span><span class="o">=</span><span class="n">max_rows</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="n">quotechar</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1385</span> <span class="k">return</span> <span class="n">arr</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py:997,</span> in <span class="ni">_read</span><span class="nt">(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)</span>
-<span class="g g-Whitespace">    </span><span class="mi">995</span>     <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">996</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">997</span>     <span class="n">fh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">_datasource</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">998</span>     <span class="k">if</span> <span class="n">encoding</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">999</span>         <span class="n">encoding</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fh</span><span class="p">,</span> <span class="s1">&#39;encoding&#39;</span><span class="p">,</span> <span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_datasource.py:192,</span> in <span class="ni">open</span><span class="nt">(path, mode, destpath, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">156</span><span class="sd"> Open `path` with `mode` and return the file object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">188</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">191</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">DataSource</span><span class="p">(</span><span class="n">destpath</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">192</span> <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_datasource.py:532,</span> in <span class="ni">DataSource.open</span><span class="nt">(self, path, mode, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">529</span>     <span class="k">return</span> <span class="n">_file_openers</span><span class="p">[</span><span class="n">ext</span><span class="p">](</span><span class="n">found</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>                               <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">532</span>     <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> not found.&quot;</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: ../../data/population.csv not found.
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;year&#39;, ylabel=&#39;population&#39;&gt;
 </pre></div>
 </div>
+<img alt="../_images/c6c46abd728212f63f91bbd793cc99a40837961f6633bdd1ed8ac9259f0babd5.png" src="../_images/c6c46abd728212f63f91bbd793cc99a40837961f6633bdd1ed8ac9259f0babd5.png" />
 </div>
 </div>
 <p><img alt="" src="practical4/images/populationscatterplot.png" /></p>
@@ -664,7 +618,7 @@ population values and the predicted values.</p>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/population.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../data/population.csv&quot;</span><span class="p">,</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;population&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;i4&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
@@ -695,6 +649,12 @@ population values and the predicted values.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-5.86674085e+08] [[324065.22138837]]
+</pre></div>
+</div>
+<img alt="../_images/1b63c8560774244fa96aa3bcd8a9d8205151119f42eff46f0b0c9dd268b726e0.png" src="../_images/1b63c8560774244fa96aa3bcd8a9d8205151119f42eff46f0b0c9dd268b726e0.png" />
+</div>
 </div>
 <p><img alt="" src="practical4/images/populationlinearregression.png" /></p>
 <p>Now test the above program including the data before 1960. What did you
@@ -712,7 +672,7 @@ features</strong> with degree 2 (refer <a class="reference external" href="http:
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">PolynomialFeatures</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/population.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../data/population.csv&quot;</span><span class="p">,</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;population&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;i4&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
@@ -747,6 +707,12 @@ features</strong> with degree 2 (refer <a class="reference external" href="http:
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-4.30491266e+09] [[ 0.00000000e+00  4.06776344e+06 -9.42279929e+02]]
+</pre></div>
+</div>
+<img alt="../_images/8110ce024f7846d91c165fc5296469438f678f1235a83133df53fe48b9fd6f9d.png" src="../_images/8110ce024f7846d91c165fc5296469438f678f1235a83133df53fe48b9fd6f9d.png" />
+</div>
 </div>
 <p><img alt="" src="practical4/images/populationpolynomialregression.png" /></p>
 <p>Before jumping into a conclusion, let’s consider the entire data and
@@ -760,7 +726,7 @@ see.</p>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">PolynomialFeatures</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/population.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;../data/population.csv&quot;</span><span class="p">,</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;population&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;i4&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
@@ -799,6 +765,12 @@ see.</p>
 <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[7.53637479e+09] [[ 0.00000000e+00 -7.89980194e+06  2.08142727e+03]]
+</pre></div>
+</div>
+<img alt="../_images/ecad1585a93492a1ccc47ec03da12a995a8c071aee65a526031d9e3c659143fb.png" src="../_images/ecad1585a93492a1ccc47ec03da12a995a8c071aee65a526031d9e3c659143fb.png" />
 </div>
 </div>
 <p><img alt="" src="practical4/images/allpopulationpolynomialregression.png" /></p>
@@ -853,6 +825,11 @@ Here, we will label the complete dataset and see whether our model
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1])
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now we will remove some labeled/classified data and see the predicted
 results.</p>
@@ -883,6 +860,11 @@ results.</p>
 
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">perceptron</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_predict</span><span class="p">)</span>
 <span class="n">y_predict</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 1, 0])
 </pre></div>
 </div>
 </div>
@@ -919,6 +901,11 @@ results.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 1, 0])
+</pre></div>
+</div>
+</div>
 </div>
 <p>Now, we will try another classifer using support vector machines.</p>
 <div class="cell docutils container">
@@ -952,6 +939,11 @@ results.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 1, 0])
+</pre></div>
+</div>
+</div>
 </div>
 <p>We will now use scikit-learn and the classifiers seen above to recognize
 handwriting. Scikit-learn has a lot of datasets. We will use one such
@@ -965,6 +957,11 @@ images of digits. The following program will show the labels.</p>
 <span class="n">digits</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_digits</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 1 2 3 4 5 6 7 8 9]
 </pre></div>
 </div>
 </div>
@@ -987,6 +984,21 @@ image.</p>
 <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of images:  115008
+Input data:  [[ 0.  0.  5. 13.  9.  1.  0.  0.]
+ [ 0.  0. 13. 15. 10. 15.  5.  0.]
+ [ 0.  3. 15.  2.  0. 11.  8.  0.]
+ [ 0.  4. 12.  0.  0.  8.  8.  0.]
+ [ 0.  5.  8.  0.  0.  9.  8.  0.]
+ [ 0.  4. 11.  0.  1. 12.  7.  0.]
+ [ 0.  2. 14.  5. 10. 12.  0.  0.]
+ [ 0.  0.  6. 13. 10.  0.  0.  0.]]
+Label: 0
+</pre></div>
+</div>
+<img alt="../_images/46d44b2cd1c4773aaf027ca88df9b14828b7dea06715607aff649fd46c4c1017.png" src="../_images/46d44b2cd1c4773aaf027ca88df9b14828b7dea06715607aff649fd46c4c1017.png" />
 </div>
 </div>
 <p>We will now use a support vector classifier to train the data. We will
@@ -1019,6 +1031,12 @@ already have labels for the entire dataset.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Predicted value:  [4]
+</pre></div>
+</div>
+<img alt="../_images/c2575e63a30283d01a075d5bf2e08649462c59baab57f0ec5b33d34613e39e4c.png" src="../_images/c2575e63a30283d01a075d5bf2e08649462c59baab57f0ec5b33d34613e39e4c.png" />
+</div>
 </div>
 <p><img alt="" src="practical4/images/scikitlearnfour.png" /></p>
 <p>Now let’s try predicting the remaining labels and use the classifcation
@@ -1049,6 +1067,26 @@ report to get the precision of prediction.</p>
 
 <span class="c1"># classification report</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">classification_report</span><span class="p">(</span><span class="n">actual_labels</span><span class="p">,</span> <span class="n">predicted_labels</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99        88
+           1       0.99      0.96      0.97        91
+           2       0.99      0.99      0.99        86
+           3       0.98      0.90      0.94        91
+           4       0.99      0.96      0.97        92
+           5       0.95      0.96      0.95        91
+           6       0.99      0.99      0.99        91
+           7       0.98      0.99      0.98        89
+           8       0.94      1.00      0.97        87
+           9       0.92      0.98      0.95        92
+
+    accuracy                           0.97       898
+   macro avg       0.97      0.97      0.97       898
+weighted avg       0.97      0.97      0.97       898
 </pre></div>
 </div>
 </div>
@@ -1087,6 +1125,26 @@ and see its performance.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+           0       0.91      0.98      0.94        88
+           1       0.79      0.91      0.85        91
+           2       0.98      0.97      0.97        86
+           3       0.95      0.84      0.89        91
+           4       0.95      0.90      0.93        92
+           5       0.83      0.92      0.88        91
+           6       0.97      0.99      0.98        91
+           7       0.98      0.92      0.95        89
+           8       0.94      0.74      0.83        87
+           9       0.83      0.90      0.86        92
+
+    accuracy                           0.91       898
+   macro avg       0.91      0.91      0.91       898
+weighted avg       0.91      0.91      0.91       898
+</pre></div>
+</div>
+</div>
 </div>
 <p>Finally, we will finish the test with Multilayer Perceptron (refer
 <a class="reference external" href="http://scikit-learn.org/stable/modules/neural_networks_supervised.html#multi-layer-perceptron">here</a>).</p>
@@ -1120,6 +1178,26 @@ and see its performance.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
+
+           0       1.00      0.98      0.99        88
+           1       0.95      0.91      0.93        91
+           2       1.00      0.99      0.99        86
+           3       0.96      0.84      0.89        91
+           4       0.99      0.92      0.96        92
+           5       0.91      0.96      0.93        91
+           6       0.95      0.99      0.97        91
+           7       0.98      0.98      0.98        89
+           8       0.89      0.94      0.92        87
+           9       0.86      0.97      0.91        92
+
+    accuracy                           0.95       898
+   macro avg       0.95      0.95      0.95       898
+weighted avg       0.95      0.95      0.95       898
+</pre></div>
+</div>
+</div>
 </div>
 <p>Did you try changing the number of hidden layers?</p>
 <p>What are your observations after trying the different classifiers?</p>
@@ -1145,6 +1223,11 @@ fit our data and then predict a class for a previously unseen value.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0])
+</pre></div>
+</div>
+</div>
 </div>
 <p>Our next goal is to visualize the decision tree. Look at the following
 code and see how we have given names to the two columns of the above
@@ -1154,6 +1237,13 @@ data. We also gave name names to the <em>result</em> data entries, calling them
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>graphviz<span class="w"> </span>pydotplus
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: graphviz in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (0.20.3)
+Requirement already satisfied: pydotplus in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (2.0.2)
+Requirement already satisfied: pyparsing&gt;=2.0.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pydotplus) (3.1.2)
 </pre></div>
 </div>
 </div>
@@ -1183,6 +1273,42 @@ data. We also gave name names to the <em>result</em> data entries, calling them
 <span class="n">pydot_graph</span> <span class="o">=</span> <span class="n">pydotplus</span><span class="o">.</span><span class="n">graph_from_dot_data</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>
 <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">pydot_graph</span><span class="o">.</span><span class="n">create_png</span><span class="p">())</span>
 <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">InvocationException</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="n">pydot_graph</span> <span class="o">=</span> <span class="n">pydotplus</span><span class="o">.</span><span class="n">graph_from_dot_data</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">21</span> <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="n">pydot_graph</span><span class="o">.</span><span class="n">create_png</span><span class="p">())</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/pydotplus/graphviz.py:1797,</span> in <span class="ni">Dot.__init__.&lt;locals&gt;.&lt;lambda&gt;</span><span class="nt">(f, prog)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1792</span> <span class="c1"># Automatically creates all the methods enabling the creation</span>
+<span class="g g-Whitespace">   </span><span class="mi">1793</span> <span class="c1"># of output in any of the supported formats.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1794</span> <span class="k">for</span> <span class="n">frmt</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">formats</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1795</span>     <span class="bp">self</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1796</span>         <span class="s1">&#39;create_&#39;</span> <span class="o">+</span> <span class="n">frmt</span><span class="p">,</span>
+<span class="ne">-&gt; </span><span class="mi">1797</span>         <span class="k">lambda</span> <span class="n">f</span><span class="o">=</span><span class="n">frmt</span><span class="p">,</span> <span class="n">prog</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">prog</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">prog</span><span class="o">=</span><span class="n">prog</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1798</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1799</span>     <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s1">&#39;create_&#39;</span> <span class="o">+</span> <span class="n">frmt</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1800</span>     <span class="n">f</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1801</span><span class="w">         </span><span class="sd">&#39;&#39;&#39;Refer to the docstring accompanying the&#39;&#39;&#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1802</span><span class="w">         </span><span class="sd">&#39;&#39;&#39;&#39;create&#39; method for more information.&#39;&#39;&#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1803</span>     <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/pydotplus/graphviz.py:1959,</span> in <span class="ni">Dot.create</span><span class="nt">(self, prog, format)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1957</span>     <span class="bp">self</span><span class="o">.</span><span class="n">progs</span> <span class="o">=</span> <span class="n">find_graphviz</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1958</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">progs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1959</span>         <span class="k">raise</span> <span class="n">InvocationException</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1960</span>             <span class="s1">&#39;GraphViz</span><span class="se">\&#39;</span><span class="s1">s executables not found&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1962</span> <span class="k">if</span> <span class="n">prog</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">progs</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1963</span>     <span class="k">raise</span> <span class="n">InvocationException</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1964</span>         <span class="s1">&#39;GraphViz</span><span class="se">\&#39;</span><span class="s1">s executable &quot;</span><span class="si">%s</span><span class="s1">&quot; not found&#39;</span> <span class="o">%</span> <span class="n">prog</span><span class="p">)</span>
+
+<span class="ne">InvocationException</span>: GraphViz&#39;s executables not found
 </pre></div>
 </div>
 </div>

@@ -15,69 +15,61 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import matplotlib.pyplot as plot
-import pandas as pd
+from sklearn import tree
+import graphviz
+import pydotplus
+from IPython.display import Image, display
 
-dataset = np.loadtxt(
-    "../../data/population.csv",
-    dtype={"names": ("year", "population"), "formats": ("i4", "i")},
-    skiprows=1,
-    delimiter=",",
-    encoding="UTF-8",
+data = [[0, 0], [1, 1], [1, 0]]
+result = [1, 0, 1]
+dtc = tree.DecisionTreeClassifier()
+dtc = dtc.fit(data, result)
+
+dot_data = tree.export_graphviz(
+    dtc,
+    out_file=None,
+    feature_names=["column1", "column2"],
+    filled=True,
+    rounded=True,
+    class_names=["class1", "class2"],
 )
-
-df = pd.DataFrame(dataset)
-df.plot(x="year", y="population", kind="scatter")
+graph = graphviz.Source(dot_data)
+pydot_graph = pydotplus.graph_from_dot_data(dot_data)
+img = Image(pydot_graph.create_png())
+display(img)
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [0;32mIn[6], line 5[0m
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplot[39;00m
-[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
-[0;32m----> 5[0m dataset [38;5;241m=[39m [43mnp[49m[38;5;241;43m.[39;49m[43mloadtxt[49m[43m([49m
-[1;32m      6[0m [43m    [49m[38;5;124;43m"[39;49m[38;5;124;43m../../data/population.csv[39;49m[38;5;124;43m"[39;49m[43m,[49m
-[1;32m      7[0m [43m    [49m[43mdtype[49m[38;5;241;43m=[39;49m[43m{[49m[38;5;124;43m"[39;49m[38;5;124;43mnames[39;49m[38;5;124;43m"[39;49m[43m:[49m[43m [49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43myear[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mpopulation[39;49m[38;5;124;43m"[39;49m[43m)[49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mformats[39;49m[38;5;124;43m"[39;49m[43m:[49m[43m [49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mi4[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mi[39;49m[38;5;124;43m"[39;49m[43m)[49m[43m}[49m[43m,[49m
-[1;32m      8[0m [43m    [49m[43mskiprows[49m[38;5;241;43m=[39;49m[38;5;241;43m1[39;49m[43m,[49m
-[1;32m      9[0m [43m    [49m[43mdelimiter[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43m,[39;49m[38;5;124;43m"[39;49m[43m,[49m
-[1;32m     10[0m [43m    [49m[43mencoding[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43mUTF-8[39;49m[38;5;124;43m"[39;49m[43m,[49m
-[1;32m     11[0m [43m)[49m
-[1;32m     13[0m df [38;5;241m=[39m pd[38;5;241m.[39mDataFrame(dataset)
-[1;32m     14[0m df[38;5;241m.[39mplot(x[38;5;241m=[39m[38;5;124m"[39m[38;5;124myear[39m[38;5;124m"[39m, y[38;5;241m=[39m[38;5;124m"[39m[38;5;124mpopulation[39m[38;5;124m"[39m, kind[38;5;241m=[39m[38;5;124m"[39m[38;5;124mscatter[39m[38;5;124m"[39m)
+[0;31mInvocationException[0m                       Traceback (most recent call last)
+Cell [0;32mIn[22], line 21[0m
+[1;32m     19[0m graph [38;5;241m=[39m graphviz[38;5;241m.[39mSource(dot_data)
+[1;32m     20[0m pydot_graph [38;5;241m=[39m pydotplus[38;5;241m.[39mgraph_from_dot_data(dot_data)
+[0;32m---> 21[0m img [38;5;241m=[39m Image([43mpydot_graph[49m[38;5;241;43m.[39;49m[43mcreate_png[49m[43m([49m[43m)[49m)
+[1;32m     22[0m display(img)
 
-File [0;32m/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py:1380[0m, in [0;36mloadtxt[0;34m(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)[0m
-[1;32m   1377[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(delimiter, [38;5;28mbytes[39m):
-[1;32m   1378[0m     delimiter [38;5;241m=[39m delimiter[38;5;241m.[39mdecode([38;5;124m'[39m[38;5;124mlatin1[39m[38;5;124m'[39m)
-[0;32m-> 1380[0m arr [38;5;241m=[39m [43m_read[49m[43m([49m[43mfname[49m[43m,[49m[43m [49m[43mdtype[49m[38;5;241;43m=[39;49m[43mdtype[49m[43m,[49m[43m [49m[43mcomment[49m[38;5;241;43m=[39;49m[43mcomment[49m[43m,[49m[43m [49m[43mdelimiter[49m[38;5;241;43m=[39;49m[43mdelimiter[49m[43m,[49m
-[1;32m   1381[0m [43m            [49m[43mconverters[49m[38;5;241;43m=[39;49m[43mconverters[49m[43m,[49m[43m [49m[43mskiplines[49m[38;5;241;43m=[39;49m[43mskiprows[49m[43m,[49m[43m [49m[43musecols[49m[38;5;241;43m=[39;49m[43musecols[49m[43m,[49m
-[1;32m   1382[0m [43m            [49m[43munpack[49m[38;5;241;43m=[39;49m[43munpack[49m[43m,[49m[43m [49m[43mndmin[49m[38;5;241;43m=[39;49m[43mndmin[49m[43m,[49m[43m [49m[43mencoding[49m[38;5;241;43m=[39;49m[43mencoding[49m[43m,[49m
-[1;32m   1383[0m [43m            [49m[43mmax_rows[49m[38;5;241;43m=[39;49m[43mmax_rows[49m[43m,[49m[43m [49m[43mquote[49m[38;5;241;43m=[39;49m[43mquotechar[49m[43m)[49m
-[1;32m   1385[0m [38;5;28;01mreturn[39;00m arr
+File [0;32m/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/pydotplus/graphviz.py:1797[0m, in [0;36mDot.__init__.<locals>.<lambda>[0;34m(f, prog)[0m
+[1;32m   1792[0m [38;5;66;03m# Automatically creates all the methods enabling the creation[39;00m
+[1;32m   1793[0m [38;5;66;03m# of output in any of the supported formats.[39;00m
+[1;32m   1794[0m [38;5;28;01mfor[39;00m frmt [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39mformats:
+[1;32m   1795[0m     [38;5;28mself[39m[38;5;241m.[39m[38;5;21m__setattr__[39m(
+[1;32m   1796[0m         [38;5;124m'[39m[38;5;124mcreate_[39m[38;5;124m'[39m [38;5;241m+[39m frmt,
+[0;32m-> 1797[0m         [38;5;28;01mlambda[39;00m f[38;5;241m=[39mfrmt, prog[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mprog: [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mcreate[49m[43m([49m[38;5;28;43mformat[39;49m[38;5;241;43m=[39;49m[43mf[49m[43m,[49m[43m [49m[43mprog[49m[38;5;241;43m=[39;49m[43mprog[49m[43m)[49m
+[1;32m   1798[0m     )
+[1;32m   1799[0m     f [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m[38;5;18m__dict__[39m[[38;5;124m'[39m[38;5;124mcreate_[39m[38;5;124m'[39m [38;5;241m+[39m frmt]
+[1;32m   1800[0m     f[38;5;241m.[39m[38;5;18m__doc__[39m [38;5;241m=[39m (
+[1;32m   1801[0m [38;5;250m        [39m[38;5;124;03m'''Refer to the docstring accompanying the'''[39;00m
+[1;32m   1802[0m [38;5;250m        [39m[38;5;124;03m''''create' method for more information.'''[39;00m
+[1;32m   1803[0m     )
 
-File [0;32m/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py:997[0m, in [0;36m_read[0;34m(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)[0m
-[1;32m    995[0m     fname [38;5;241m=[39m os[38;5;241m.[39mfspath(fname)
-[1;32m    996[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(fname, [38;5;28mstr[39m):
-[0;32m--> 997[0m     fh [38;5;241m=[39m [43mnp[49m[38;5;241;43m.[39;49m[43mlib[49m[38;5;241;43m.[39;49m[43m_datasource[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m[43mfname[49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mrt[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mencoding[49m[38;5;241;43m=[39;49m[43mencoding[49m[43m)[49m
-[1;32m    998[0m     [38;5;28;01mif[39;00m encoding [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[1;32m    999[0m         encoding [38;5;241m=[39m [38;5;28mgetattr[39m(fh, [38;5;124m'[39m[38;5;124mencoding[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mlatin1[39m[38;5;124m'[39m)
+File [0;32m/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/pydotplus/graphviz.py:1959[0m, in [0;36mDot.create[0;34m(self, prog, format)[0m
+[1;32m   1957[0m     [38;5;28mself[39m[38;5;241m.[39mprogs [38;5;241m=[39m find_graphviz()
+[1;32m   1958[0m     [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mprogs [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[0;32m-> 1959[0m         [38;5;28;01mraise[39;00m InvocationException(
+[1;32m   1960[0m             [38;5;124m'[39m[38;5;124mGraphViz[39m[38;5;130;01m\'[39;00m[38;5;124ms executables not found[39m[38;5;124m'[39m)
+[1;32m   1962[0m [38;5;28;01mif[39;00m prog [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39mprogs:
+[1;32m   1963[0m     [38;5;28;01mraise[39;00m InvocationException(
+[1;32m   1964[0m         [38;5;124m'[39m[38;5;124mGraphViz[39m[38;5;130;01m\'[39;00m[38;5;124ms executable [39m[38;5;124m"[39m[38;5;132;01m%s[39;00m[38;5;124m"[39m[38;5;124m not found[39m[38;5;124m'[39m [38;5;241m%[39m prog)
 
-File [0;32m/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_datasource.py:192[0m, in [0;36mopen[0;34m(path, mode, destpath, encoding, newline)[0m
-[1;32m    155[0m [38;5;250m[39m[38;5;124;03m"""[39;00m
-[1;32m    156[0m [38;5;124;03mOpen `path` with `mode` and return the file object.[39;00m
-[1;32m    157[0m 
-[0;32m   (...)[0m
-[1;32m    188[0m 
-[1;32m    189[0m [38;5;124;03m"""[39;00m
-[1;32m    191[0m ds [38;5;241m=[39m DataSource(destpath)
-[0;32m--> 192[0m [38;5;28;01mreturn[39;00m [43mds[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m[43mpath[49m[43m,[49m[43m [49m[43mmode[49m[43m,[49m[43m [49m[43mencoding[49m[38;5;241;43m=[39;49m[43mencoding[49m[43m,[49m[43m [49m[43mnewline[49m[38;5;241;43m=[39;49m[43mnewline[49m[43m)[49m
-
-File [0;32m/opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_datasource.py:532[0m, in [0;36mDataSource.open[0;34m(self, path, mode, encoding, newline)[0m
-[1;32m    529[0m     [38;5;28;01mreturn[39;00m _file_openers[ext](found, mode[38;5;241m=[39mmode,
-[1;32m    530[0m                               encoding[38;5;241m=[39mencoding, newline[38;5;241m=[39mnewline)
-[1;32m    531[0m [38;5;28;01melse[39;00m:
-[0;32m--> 532[0m     [38;5;28;01mraise[39;00m [38;5;167;01mFileNotFoundError[39;00m([38;5;124mf[39m[38;5;124m"[39m[38;5;132;01m{[39;00mpath[38;5;132;01m}[39;00m[38;5;124m not found.[39m[38;5;124m"[39m)
-
-[0;31mFileNotFoundError[0m: ../../data/population.csv not found.
+[0;31mInvocationException[0m: GraphViz's executables not found
 

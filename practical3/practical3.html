@@ -443,7 +443,7 @@ of number of programming languages released per year. Verify the output.</p>
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/pl.json&quot;</span><span class="p">))</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../data/pl.json&quot;</span><span class="p">))</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
@@ -452,27 +452,7 @@ of number of programming languages released per year. Verify the output.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">json</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/pl.json&quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">dataframe</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/IPython/core/interactiveshell.py:324,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">324</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;../../data/pl.json&#39;
-</pre></div>
-</div>
+<img alt="../_images/7b4742f671722dafe94a4eb0c79834ff1c19b9e826469f1e953ad0e87c5b4199.png" src="../_images/7b4742f671722dafe94a4eb0c79834ff1c19b9e826469f1e953ad0e87c5b4199.png" />
 </div>
 </div>
 <p>Following program will add title and labels to the x-axis and y-axis.</p>
@@ -483,7 +463,7 @@ of number of programming languages released per year. Verify the output.</p>
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/pl.json&quot;</span><span class="p">))</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../data/pl.json&quot;</span><span class="p">))</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
@@ -493,6 +473,9 @@ of number of programming languages released per year. Verify the output.</p>
 <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a3e8eef36f6fc3aabad756991edf03af795d6408bd509b1143ac93ce1485105c.png" src="../_images/a3e8eef36f6fc3aabad756991edf03af795d6408bd509b1143ac93ce1485105c.png" />
 </div>
 </div>
 <p>There is yet another way to plot the dataframes, by using
@@ -504,13 +487,19 @@ of number of programming languages released per year. Verify the output.</p>
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/pl.json&quot;</span><span class="p">))</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../data/pl.json&quot;</span><span class="p">))</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">grouped</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 <span class="n">grouped</span> <span class="o">=</span> <span class="n">grouped</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">:</span> <span class="s2">&quot;count&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="n">grouped</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Programming languages per year&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: title={&#39;center&#39;: &#39;Programming languages per year&#39;}, xlabel=&#39;year&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/36d07054b3c3e3a5ea1e63b712166b6195cb92a196b13a22f1e5db750b2484c0.png" src="../_images/36d07054b3c3e3a5ea1e63b712166b6195cb92a196b13a22f1e5db750b2484c0.png" />
 </div>
 </div>
 <p><img alt="" src="practical3/images/dataframeplot.png" /></p>
@@ -525,7 +514,7 @@ on multiple columns. Subplots can be used to visualize these data.</p>
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 
-<span class="n">jsondata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/plparadigm.json&quot;</span><span class="p">))</span>
+<span class="n">jsondata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../data/plparadigm.json&quot;</span><span class="p">))</span>
 <span class="n">array</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">jsondata</span><span class="p">:</span>
     <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;languageLabel&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;paradigmLabel&quot;</span><span class="p">]])</span>
@@ -541,13 +530,16 @@ on multiple columns. Subplots can be used to visualize these data.</p>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="n">nr</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
 <span class="c1"># Creation of subplots</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grouped</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
-    <span class="n">g</span> <span class="o">=</span> <span class="n">grouped</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">group</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">grouped</span><span class="o">.</span><span class="n">get_group</span><span class="p">((</span><span class="n">group</span><span class="p">,))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
     <span class="n">g</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
         <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">group</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">]</span>
     <span class="p">)</span>
 <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6172e44279b6b20d19cf562dcbe83e370e11acd72b109946947592bc30db88ab.png" src="../_images/6172e44279b6b20d19cf562dcbe83e370e11acd72b109946947592bc30db88ab.png" />
 </div>
 </div>
 <p><img alt="" src="practical3/images/subplots.png" /></p>
@@ -568,8 +560,13 @@ get some metadata of the image.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/picture.bmp&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/picture.bmp&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(640, 480) BMP
 </pre></div>
 </div>
 </div>
@@ -582,11 +579,115 @@ now try to get data of 100 pixels from an image.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 0 (102, 94, 105)
+0 1 (77, 69, 82)
+0 2 (77, 70, 86)
+0 3 (75, 71, 86)
+0 4 (75, 71, 86)
+0 5 (77, 71, 85)
+0 6 (78, 70, 83)
+0 7 (80, 70, 81)
+0 8 (78, 70, 83)
+0 9 (80, 69, 83)
+1 0 (78, 70, 83)
+1 1 (53, 45, 58)
+1 2 (53, 46, 62)
+1 3 (50, 46, 61)
+1 4 (53, 46, 62)
+1 5 (52, 46, 60)
+1 6 (53, 45, 58)
+1 7 (55, 45, 56)
+1 8 (55, 44, 58)
+1 9 (54, 43, 57)
+2 0 (76, 70, 82)
+2 1 (53, 45, 60)
+2 2 (53, 45, 60)
+2 3 (52, 46, 60)
+2 4 (53, 47, 61)
+2 5 (54, 46, 59)
+2 6 (55, 44, 58)
+2 7 (56, 44, 58)
+2 8 (54, 44, 55)
+2 9 (54, 42, 54)
+3 0 (78, 72, 86)
+3 1 (55, 47, 62)
+3 2 (56, 48, 63)
+3 3 (55, 47, 60)
+3 4 (56, 48, 61)
+3 5 (57, 46, 60)
+3 6 (56, 45, 59)
+3 7 (56, 44, 58)
+3 8 (54, 42, 54)
+3 9 (53, 41, 53)
+4 0 (80, 74, 86)
+4 1 (57, 49, 62)
+4 2 (57, 49, 60)
+4 3 (57, 49, 60)
+4 4 (59, 49, 60)
+4 5 (57, 47, 56)
+4 6 (56, 44, 54)
+4 7 (56, 43, 53)
+4 8 (54, 41, 51)
+4 9 (52, 39, 49)
+5 0 (82, 76, 90)
+5 1 (59, 51, 64)
+5 2 (61, 50, 64)
+5 3 (59, 49, 60)
+5 4 (58, 48, 57)
+5 5 (57, 45, 55)
+5 6 (55, 43, 53)
+5 7 (54, 41, 51)
+5 8 (53, 40, 50)
+5 9 (52, 39, 49)
+6 0 (84, 76, 91)
+6 1 (61, 50, 66)
+6 2 (61, 50, 64)
+6 3 (59, 47, 59)
+6 4 (58, 46, 58)
+6 5 (56, 44, 56)
+6 6 (54, 42, 54)
+6 7 (52, 40, 52)
+6 8 (51, 40, 46)
+6 9 (51, 40, 46)
+7 0 (83, 75, 90)
+7 1 (61, 50, 66)
+7 2 (61, 48, 65)
+7 3 (58, 46, 60)
+7 4 (56, 44, 56)
+7 5 (54, 42, 52)
+7 6 (53, 41, 51)
+7 7 (51, 39, 49)
+7 8 (52, 41, 47)
+7 9 (53, 42, 46)
+8 0 (83, 75, 88)
+8 1 (58, 48, 59)
+8 2 (59, 47, 59)
+8 3 (57, 43, 56)
+8 4 (55, 43, 53)
+8 5 (53, 42, 50)
+8 6 (51, 42, 47)
+8 7 (52, 43, 46)
+8 8 (56, 47, 48)
+8 9 (59, 50, 51)
+9 0 (82, 74, 85)
+9 1 (57, 47, 58)
+9 2 (57, 45, 57)
+9 3 (55, 41, 54)
+9 4 (54, 42, 52)
+9 5 (54, 43, 49)
+9 6 (54, 45, 48)
+9 7 (57, 48, 49)
+9 8 (61, 53, 51)
+9 9 (65, 57, 54)
 </pre></div>
 </div>
 </div>
@@ -600,8 +701,13 @@ width and height of image (in pixels).</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">getbands</span><span class="p">(),</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">bits</span><span class="p">,</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RGB (&#39;R&#39;, &#39;G&#39;, &#39;B&#39;) 8 640 480
 </pre></div>
 </div>
 </div>
@@ -613,13 +719,59 @@ width and height of image (in pixels).</p>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="kn">from</span> <span class="nn">PIL.ExifTags</span> <span class="kn">import</span> <span class="n">TAGS</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">exif_data</span> <span class="o">=</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">_getexif</span><span class="p">()</span>
 
 <span class="k">if</span> <span class="n">exif_data</span><span class="p">:</span>  <span class="c1"># if there is some EXIF information</span>
     <span class="k">for</span> <span class="n">tag</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">exif_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">TAGS</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">TAGS</span><span class="p">[</span><span class="n">tag</span><span class="p">],</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ResolutionUnit 2
+ExifOffset 204
+Make Canon
+Model Canon EOS 1100D
+YResolution 72.0
+Orientation 1
+DateTime 2018:02:11 10:47:45
+YCbCrPositioning 2
+Copyright 
+XResolution 72.0
+Artist 
+ExifVersion b&#39;0230&#39;
+ComponentsConfiguration b&#39;\x01\x02\x03\x00&#39;
+ShutterSpeedValue 6.375
+DateTimeOriginal 2012:07:29 16:45:44
+DateTimeDigitized 2012:07:29 16:45:44
+ApertureValue 5.0
+ExposureBiasValue 0.0
+MeteringMode 5
+UserComment b&#39;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&#39;
+Flash 16
+FocalLength 47.0
+ColorSpace 1
+ExifImageWidth 640
+ExifInteroperabilityOffset 7968
+FocalPlaneXResolution 4720.441988950276
+FocalPlaneYResolution 4786.55462184874
+SubsecTime 21
+SubsecTimeOriginal 21
+SubsecTimeDigitized 21
+ExifImageHeight 480
+FocalPlaneResolutionUnit 2
+ExposureTime 0.0125
+FNumber 5.6
+ExposureProgram 2
+CustomRendered 0
+ISOSpeedRatings 100
+ExposureMode 0
+FlashPixVersion b&#39;0100&#39;
+WhiteBalance 0
+MakerNote b&#39;%\x00\x01\x00\x03\x001\x00\x00\x00`\x04\x00\x00\x02\x00\x03\x00\x04\x00\x00\x00\xc2\x04\x00\x00\x03\x00\x03\x00\x04\x00\x00\x00\xca\x04\x00\x00\x04\x00\x03\x00&quot;\x00\x00\x00\xd2\x04\x00\x00\x06\x00\x02\x00\x10\x00\x00\x00\x16\x05\x00\x00\x07\x00\x02\x00\x18\x00\x00\x00&amp;\x05\x00\x00\t\x00\x02\x00 \x00\x00\x00&gt;\x05\x00\x00\r\x00\x07\x00\x00\x06\x00\x00^\x05\x00\x00\x10\x00\x04\x00\x01\x00\x00\x00\x88\x02\x00\x80\x13\x00\x03\x00\x04\x00\x00\x00^\x0b\x00\x00\x19\x00\x03\x00\x01\x00\x00\x00\x01\x00\x00\x00&amp;\x00\x03\x000\x00\x00\x00f\x0b\x00\x00\x83\x00\x04\x00\x01\x00\x00\x00\x00\x00\x00\x00\x93\x00\x03\x00\x1c\x00\x00\x00\xc6\x0b\x00\x00\x95\x00\x02\x00F\x00\x00\x00\xfe\x0b\x00\x00\x96\x00\x02\x00\x10\x00\x00\x00D\x0c\x00\x00\x97\x00\x07\x00\x00\x04\x00\x00T\x0c\x00\x00\x98\x00\x03\x00\x04\x00\x00\x00T\x10\x00\x00\x99\x00\x04\x00,\x00\x00\x00\\\x10\x00\x00\x9a\x00\x04\x00\x05\x00\x00\x00\x0c\x11\x00\x00\xa0\x00\x03\x00\x0e\x00\x00\x00 \x11\x00\x00\xaa\x00\x03\x00\x06\x00\x00\x00&lt;\x11\x00\x00\xb4\x00\x03\x00\x01\x00\x00\x00\x01\x00\x00\x00\xd0\x00\x04\x00\x01\x00\x00\x00\x00\x00\x00\x00\xe0\x00\x03\x00\x11\x00\x00\x00H\x11\x00\x00\x01@\x03\x00B\x05\x00\x00j\x11\x00\x00\x08@\x03\x00\x03\x00\x00\x00\xee\x1b\x00\x00\t@\x03\x00\x03\x00\x00\x00\xf4\x1b\x00\x00\x10@\x02\x00 \x00\x00\x00\xfa\x1b\x00\x00\x11@\x07\x00\xfc\x00\x00\x00\x1a\x1c\x00\x00\x12@\x02\x00 \x00\x00\x00\x16\x1d\x00\x00\x15@\x07\x00t\x00\x00\x006\x1d\x00\x00\x16@\x04\x00\x06\x00\x00\x00\xaa\x1d\x00\x00\x17@\x04\x00\x02\x00\x00\x00\xc2\x1d\x00\x00\x18@\x04\x00\x03\x00\x00\x00\xca\x1d\x00\x00\x19@\x07\x00\x1e\x00\x00\x00\xd6\x1d\x00\x00 @\x04\x00\x05\x00\x00\x00\xf4\x1d\x00\x00\x00\x00\x00\x00b\x00\x02\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\x7f\x0f\x00\x03\x00\x02\x00\x00\x00\x00\x00\xff\xff4\x007\x00\x12\x00\x01\x00\x9c\x00H\x01\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00\xff\x7f\xff\xff\xff\xff\xff\xff\x00\x00\xff\xff\x00\x00/\x00\xc6&quot;\xeaL\x00\x00\x00\x00\x00\x00\x00\x00D\x00\x00\x00\xa0\x00\xd0\x00\xa0\x00\xcc\x00\x00\x00\x00\x00\x03\x00\x00\x00\x08\x00\x08\x00\x9c\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\xa4\x00\xcc\x00\x89\x00\x00\x00\x00\x00\xf8\x00\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00Canon EOS 1100D\x00Firmware Version 1.0.5\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xaa\xaak1k0H\x00\x89\x8c\x00\x03\x00\x00\x00\x00\x00\x00\x01\x00\x00\x06\x00\x00\x00\x9c\x92t{{\x00/\x00m\x00\x00\x00\x00\x00\x00\x00\x00z\x03\x00\x01\xbb\xbb\x01\x01\x00\x00\x00\x00\x02\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\xa7\x04\x009\x00\x99\x8e\x00\x00:\x000\x00\x0c\xcc\xcc\t\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\xff\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00P\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x81\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01/Z\x004\x00\x12\x007\x91u\x92?\x00\xff\xff\xff\xff\xff\xff\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\xb0\x10\x00\x00 \x0b\x00\x00\xac\x01\x00\x00\x1c\x01\x00\x00\xac\x01\x00\x00&lt;\x02\x00\x00\xd0\x02\x00\x00\xe0\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xd0\x02\x00\x00\xe0\x01\x00\x00\xd0\x02\x00\x00\xe0\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xd0\x02\x00\x00\xe0\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\n\x02\x00\x01\x00\x01\x01\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x001.0.5\x0055(21)\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x8e\x00\x00\x00d\x00\x00\x00d\x00\x00\x00\x00\x00\x00\x001\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00e\x00\x00\x00d\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc5\x01\x00\x04\x00\x04\xc8\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc5\x01\x00\x04\x00\x04\xc8\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc5\x01\x00\x04\x00\x04\xc8\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc5\x01\x00\x04\x00\x04\xc8\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc5\x01\x00\x04\x00\x04\xc8\x02\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xef\xbe\xad\xde\xef\xbe\xad\xde\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xef\xbe\xad\xde\xef\xbe\xad\xde\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xef\xbe\xad\xde\xef\xbe\xad\xde\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xef\xbe\xad\xde\xef\xbe\xad\xde\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xef\xbe\xad\xde\xef\xbe\xad\xde\x00\x00\x00\x00\x03\x00\x00\x00\xef\xbe\xad\xde\xef\xbe\xad\xde\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xef\xbe\xad\xde\xef\xbe\xad\xde\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x81\x00\x81\x00\x81\x00\x00\x00\xff\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x04\x00\x04\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x04\x00\x04\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x04\x00\x04\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x04\x00\x04\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x04\x00\x04\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\xb8h\x15P\xdb\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\\-\x00\x00\x00\xd7\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x9f\x00\x07\x00p\x00`\x00\x04\x00\t\x00\t\x00\xb0\x10 \x0b\xb0\x10 \x0bj\x00j\x00j\x00\x95\x00\xb7\x00\x95\x00j\x00j\x00j\x00\x94\x00\x94\x00\x94\x00f\x00\xbe\x00f\x00\x94\x00\x94\x00\x94\x00\x9d\xfb^\xfd^\xfd\x00\x00\x00\x00\x00\x00\xa2\x02\xa2\x02c\x04\x00\x00M\x01\xb3\xfer\x02\x00\x00\x8e\xfdM\x01\xb3\xfe\x00\x00\xb6\x00\xff\x01\x00\x00\xff\xff8\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\xff\xfft\x00\x00\x00\x00\x00\x00\x00:\x000\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00EF-S18-55mm f/3.5-5.6 IS II\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00YB1012999\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb0\x00\x00\x00\x04\x00\x00\x00\x01\x00\x00\x00 \x00\x00\x00\x02\x00\x00\x00\x01\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x0f\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00,\x00\x00\x00\x03\x00\x00\x00\x01\x02\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x02\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x03\x02\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x14\x00\x00\x00\x01\x00\x00\x00\x0e\x05\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x04\x00\x00\x008\x00\x00\x00\x04\x00\x00\x00\x01\x07\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x04\x07\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x0e\x07\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x11\x08\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb0\x10\x00\x00 \x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1c\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xffP\x14\x81\x00\x00\x00\x00\x00\x00\x00\x0c\x00\xa3\x02\x00\x04\x00\x04\xd2\x02\x00\x00&quot;\x00\x00\x11:\x0b\x01\x00\x01\x00H\x00\x17\x00\xf7\x106\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\t\x00\xd9\x02\x00\x04\x00\x04j\x01\x00\x02\x00\x04\x00\x04\x0b\x02g\x01\x00\x04\x00\x04\x04\x03d\x06\x1d\t\x11\tU\x03O\x06\xbf\x0c\xb0\x0c\x8b\x06\x0e\x03\xdc\x08\xd5\x08\x7f\x06\x05\x00\x01\x00\r\x01\xfe\x00\x1c\x01\x00\x00\xfa\x05F\r.\r\xf2\x07\x99\x02\xd2\x00\xd0\x00\x1f\x00i\x00\xbb\x02\xb4\x02\x8d\x047\x05o\tb\t\xb5\x01\xa9\x06@\x0f+\x0f&gt;\t\xec\x02\xec\x00\xeb\x00&amp;\x00}\x00S\x03M\x03O\x05\x0e\x06\x15\x0b\n\x0bI\x02/\t\x00\x04\x00\x04\xfd\x06\x97\x11/\t\x00\x04\x00\x04\xfd\x06\x97\x115\x05\xfd\x03\x01\x04\x19\x17`\t\x00\x00\x00\x00\x00\x00\x00\x00\x00\x004\t\x00\x04\x00\x04\xe7\x05P\x14\xc7\n\x00\x04\x00\x04\x13\x05X\x1b\xf7\t\x00\x04\x00\x04q\x05p\x17q\x06\x00\x04\x00\x04\xbc\x08\x80\x0c\xf4\x07\x00\x04\x00\x04!\x08\x94\x0e4\t\x00\x04\x00\x04\xe7\x05E\x14K\n\x00\x04\x00\x04i\x05C\x184\t\x00\x04\x00\x04\xe7\x05E\x144\t\x00\x04\x00\x04\xe7\x05E\x144\t\x00\x04\x00\x04\xe7\x05E\x144\t\x00\x04\x00\x04\xe7\x05E\x144\t\x00\x04\x00\x04\xe7\x05E\x147\x04\x00\x04\x00\x04c\x04V\x0e7\x04\x00\x04\x00\x04c\x04V\x0e7\x04\x00\x04\x00\x04c\x04V\x0e7\x04\x00\x04\x00\x04c\x04V\x0e7\x04\x00\x04\x00\x04c\x04V\x0eV\xfe+\x01\xe1\x03\x94*f\xfe3\x01\xca\x03\x10\&#39;\xb1\xfeX\x01o\x03l \xf2\xfe|\x01\&#39;\x03X\x1b&amp;\xff\x9b\x01\xf1\x02p\x17@\xff\xaa\x01\xd5\x02\xe0\x15_\xff\xbd\x01\xb6\x02P\x14\x8d\xff\xd5\x01\x87\x02\\\x12\xc5\xff\xfb\x01T\x02h\x10\xfe\xff%\x02\&#39;\x02\xd8\x0e1\x00K\x02\xff\x01\xac\rm\x00|\x02\xd5\x01\x80\x0c\x9f\x00\xa5\x02\xb0\x01\xb8\x0b\xcb\x00\xd5\x02\x9a\x01\xf0\n;\x01U\x03_\x01`\t\xf4\x01\x13\x08 \x08\xff\x07\xff\x07\xff\x07\xff\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x00\x00\x00\x00\x00\x14\x00\x00\x00\x00\x00\x11\x00\x00\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12\x00\x00\x00\x14\x00\x15\x00\x15\x00\x12\x00\x00\x00\x10\x00\x00\x00\x00\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12\x00\x00\x00\x13\x00\x00\x00\x12\x00\x17\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\r\x00\x10\x00\x0e\x00\x10\x00\x12\x00\x12\x00\x13\x00\x11\x00\x15\x00\x1b\x00&quot;\x00\x1e\x00#\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00(\x00\x00\x00\x00\x00#\x00\x00\x00\x00\x00\x1f\x00\x00\x00\x00\x00%\x00\x00\x00\x00\x00\x00\x00\x00\x00\&#39;\x00\x00\x00)\x00+\x00*\x00%\x00\x00\x00 \x00\x00\x00\x00\x00\x00\x00&quot;\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&amp;\x00\x00\x00*\x00\x00\x00\&#39;\x00*\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00!\x00&amp;\x00&quot;\x00%\x00)\x00(\x00*\x00#\x00%\x00*\x002\x00(\x00.\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\&#39;\x00\x00\x00\x00\x00$\x00\x00\x00\x00\x00\x1c\x00\x00\x00\x00\x00$\x00\x00\x00\x00\x00\x00\x00\x00\x00(\x00\x00\x00)\x00+\x00*\x00$\x00\x00\x00\x1f\x00\x00\x00\x00\x00\x00\x00#\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\&#39;\x00\x00\x00)\x00\x00\x00%\x00(\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&quot;\x00&amp;\x00#\x00%\x00)\x00(\x00)\x00#\x00\&#39;\x00.\x009\x00-\x001\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1d\x00\x00\x00\x00\x00\x17\x00\x00\x00\x00\x00\x13\x00\x00\x00\x00\x00\x12\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1a\x00\x00\x00\x1b\x00\x1d\x00\x1b\x00\x17\x00\x00\x00\x12\x00\x00\x00\x00\x00\x00\x00\x0e\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x19\x00\x00\x00\x1b\x00\x00\x00\x16\x00\x17\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x00\x18\x00\x14\x00\x16\x00\x17\x00\x16\x00\x16\x00\x11\x00\x11\x00\x11\x00\x13\x00\r\x00\r\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x05\x00\x06\x00\x0c\x00\x11\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x03\x00\x00\x00\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x11\x00*\x00d\x00e\x00\x1c\x02u\x00=\x00\t\x00\t\x00\x04\x00:\x00\t\x00\x00\x00\x00\x00\x00\x00\x00\x80\x00\x00\x00\x04\x00\x04\x00\x04\x96\n\t\x0f^\x1a&amp;\x0fY\xff\x1e\xff\xea\r\xf2\x10\xcb\x00\x13\x01s\x12\x00\x00\x00\x01\x00\x00U\xa8\x01\x00\xa6\x0f\x00\x00F\xff\x00\x00\xc8\xb1\x00\x04\x00\x04\x00\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\x1f\x00\x01\xff\x1f\x00\x01\x00\x00\x00\x00\x00\x02\x85\x02\xd1\x01\xc5\x01\xc8\x02k\x01\x83\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1f\x00?\x00_\x00\x7f\x00\x9f\x00\xbf\x00\xdf\x00\xff\x00\x00\x00/\x00U\x00v\x00\x91\x00\xac\x00\xc8\x00\xe4\x00\xff\x00\x01\x00\x00\x00p\x00\x00\x00\x00\x00\x10\x00 \x00@\x00`\x00\x80\x00\xc0\x00\x00\x00\x89\xff\x96\xff\x96\xff\x96\xff\x94\xff\x00\x00\x88\x04\x9b\x04\x96\x04\x96\x04\x96\x04\x99\x04\xca\x03\x88\x04\x01\x00\xff\x07\xff\x07\x00\x08\xff\x07\x00\x00\xf7/\x10\&#39;\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x1b\x00\xd2\x00\x00\x01\x00\x01\x00\x01\x00\x01\x00\x01\x00\x01\x00\x00\&#39;\x00\xd2\x00\x00\x01\x00\x01\x00\x01\x00\x01\x00\x01\x00\x01\x1a\x00\x1b\x00\&#39;\x00\x01\x00\x01\x00\xc9\x00\xd2\x00\x03\x00\x12\x00\xb5\x00\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00c\x00\xdb\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00z\x00\x81\x00\x81\x00\x81\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10t\x00\x01\x00\x00\x00\x00\x00\x00\x00F\x00\x00\x00\x00\x00\x00\x00P\x14\xb0\x10 \x0b\xff\x1f}\x1e\x01\x1d&quot;\x1bK\x1a\x90\x17\x00\x00\xb2\x03\xea\x05&quot;\x08\xdf\x08\x1a\n\x00@\xf3?\xe8?\xca?\xa0?\x8f?\x00@\xa1@\x07A\x93A\x12BEB\x00\x00\xb2\x03\xea\x05&quot;\x08\x9d\t\x1a\n\xda?\xdc?\xe1?\xee?\xff?\x07@\x00\x00\xb2\x03\xea\x05&quot;\x08\x9d\t\x1a\n\x00\x00\x00\x00\x00\x00\x18\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x03\x07\x03\x00!\x00\x00U\x0c\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00E*\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00&#39;
+SceneCaptureType 0
 </pre></div>
 </div>
 </div>
@@ -636,7 +788,7 @@ of different colors.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">histogram</span> <span class="o">=</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">histogram</span><span class="p">()</span>
 <span class="c1"># we have three bands (for this image)</span>
 <span class="n">red</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">255</span><span class="p">]</span>
@@ -650,6 +802,9 @@ of different colors.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/a589012d3c034c62bd23139d429aff726dc45832a3dd67170b26524a0db0fe35.png" src="../_images/a589012d3c034c62bd23139d429aff726dc45832a3dd67170b26524a0db0fe35.png" />
+</div>
 </div>
 <p><img alt="" src="practical3/images/histogramsubplots.png" /></p>
 <p>But if you wish to see all of them in one single plot.</p>
@@ -658,7 +813,7 @@ of different colors.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">histogram</span> <span class="o">=</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">histogram</span><span class="p">()</span>
 <span class="n">red</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">255</span><span class="p">]</span>
 <span class="n">green</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">[</span><span class="mi">256</span><span class="p">:</span><span class="mi">511</span><span class="p">]</span>
@@ -672,6 +827,9 @@ of different colors.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/c89a233ab4c5d6e4fb63347bf0830405504edc783617a9d8b6f46bbb8c56bf0e.png" src="../_images/c89a233ab4c5d6e4fb63347bf0830405504edc783617a9d8b6f46bbb8c56bf0e.png" />
+</div>
 </div>
 <p><img alt="" src="practical3/images/histogramplot.png" /></p>
 <p>But we do not wish to loose the band colors.</p>
@@ -680,7 +838,7 @@ of different colors.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">histogram</span> <span class="o">=</span> <span class="n">imgfile</span><span class="o">.</span><span class="n">histogram</span><span class="p">()</span>
 <span class="n">red</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">255</span><span class="p">]</span>
 <span class="n">green</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">[</span><span class="mi">256</span><span class="p">:</span><span class="mi">511</span><span class="p">]</span>
@@ -695,6 +853,9 @@ of different colors.</p>
 <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ceaf406649109f44b6b73ad6bad0d2d2a4230f97a250ca788634ed27addf96dc.png" src="../_images/ceaf406649109f44b6b73ad6bad0d2d2a4230f97a250ca788634ed27addf96dc.png" />
 </div>
 </div>
 <p><img alt="" src="practical3/images/histogramplotcolors.png" /></p>
@@ -716,7 +877,7 @@ image.</p>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
@@ -736,6 +897,9 @@ image.</p>
 <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ff08ae83dac7dae05e460799dfbbb4c9d7172c3d50a3b1fdb387e1b38588d79e.png" src="../_images/ff08ae83dac7dae05e460799dfbbb4c9d7172c3d50a3b1fdb387e1b38588d79e.png" />
 </div>
 </div>
 <p><img alt="" src="practical3/images/barchart.png" /></p>
@@ -795,6 +959,9 @@ using a scatter plot.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/8934e408da55b2f8ba8ed6e4d7b802dd4e80ffe442a76865c2cb1ca1b3fc2b42.png" src="../_images/8934e408da55b2f8ba8ed6e4d7b802dd4e80ffe442a76865c2cb1ca1b3fc2b42.png" />
+</div>
 </div>
 <p>Visually, it is quite evident that there are two clusters. But let’s
 use KMeans algorithm to obtain the 2 clusters. We will first see the
@@ -833,6 +1000,11 @@ labels of our clustered data.</p>
 <span class="n">clusters</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">clusters</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">numarray</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">clusters</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1]
 </pre></div>
 </div>
 </div>
@@ -879,6 +1051,9 @@ two colors for visually distinguishing them.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/38ebd31b592242e57515688601f5553169ec8e6de93e8bc6769e3c3aa4261b38.png" src="../_images/38ebd31b592242e57515688601f5553169ec8e6de93e8bc6769e3c3aa4261b38.png" />
+</div>
 </div>
 <p>What if we tried to obtain 4 clusters? Try running the following code,
 multiple times. Any observation? Try changing the value of <em>n_init</em>
@@ -923,6 +1098,9 @@ with higher values.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/20d3b9f18e011480e06fc18b648db5d71ee09f6c6db19e79cb7d3e6c7a5d6e5b.png" src="../_images/20d3b9f18e011480e06fc18b648db5d71ee09f6c6db19e79cb7d3e6c7a5d6e5b.png" />
+</div>
 </div>
 <p>Now we will try obtaining clusters with some real data (reference:
 <a class="reference internal" href="#../../data/citypopulation.json"><span class="xref myst">citypopulation.json</span></a>,
@@ -941,7 +1119,7 @@ purpose?</p>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/citypopulation.json&quot;</span><span class="p">))</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../data/citypopulation.json&quot;</span><span class="p">))</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="n">le</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
 <span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;cityLabel&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;cityLabel&quot;</span><span class="p">])</span>
@@ -963,6 +1141,9 @@ purpose?</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/ba0753f3b5086d188fd6ea366d354749b2b1bc617318441321991bfd99641e97.png" src="../_images/ba0753f3b5086d188fd6ea366d354749b2b1bc617318441321991bfd99641e97.png" />
+</div>
 </div>
 <p>Now let’s continue working with
 <a class="reference internal" href="#../../images/flower.jpg"><span class="xref myst">flower.jpg</span></a>. Let’s start once
@@ -975,7 +1156,7 @@ again with <strong>KMeans</strong> and try to get clusters of size between 2 and
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1009,6 +1190,9 @@ again with <strong>KMeans</strong> and try to get clusters of size between 2 and
 <span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/19dc46564867c7e982f9ad7ebdb81c6acb8a6dc32a423ee6dde35d4d9236678f.png" src="../_images/19dc46564867c7e982f9ad7ebdb81c6acb8a6dc32a423ee6dde35d4d9236678f.png" />
 </div>
 </div>
 <p>Your next goal is to test the above code for cluster sizes between 2 and
@@ -1029,7 +1213,7 @@ Observe the changes.</p>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">MiniBatchKMeans</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1064,6 +1248,9 @@ Observe the changes.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/8204ea548d2d3fdf5c41dd4a215814e39ab78e7a73045a40a4bc0db97ed7f196.png" src="../_images/8204ea548d2d3fdf5c41dd4a215814e39ab78e7a73045a40a4bc0db97ed7f196.png" />
+</div>
 </div>
 <p>What did you observe? Your next goal is to test the above code for
 cluster sizes between 2 and 21 which will give you the figure given
@@ -1083,7 +1270,7 @@ We start with <strong>KMeans</strong>.</p>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1103,6 +1290,66 @@ We start with <strong>KMeans</strong>.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  1 : 0.2638096809387207
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  2 : 0.2797091007232666
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  3 : 0.31745386123657227
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  4 : 0.3369259834289551
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  5 : 0.34469175338745117
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  6 : 0.35146069526672363
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  7 : 0.3995792865753174
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  8 : 0.571181058883667
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  9 : 0.5045809745788574
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  10 : 0.4618194103240967
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  11 : 0.596449613571167
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  12 : 0.6051278114318848
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  13 : 0.4801928997039795
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  14 : 0.6085975170135498
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  15 : 0.618682861328125
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  16 : 0.5539188385009766
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  17 : 0.6534378528594971
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  18 : 0.775749921798706
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  19 : 0.6012983322143555
+</pre></div>
+</div>
+<img alt="../_images/346a0365c6ab81d97d388593fba53fb9c133ae5e5efacfebd876503b47494101.png" src="../_images/346a0365c6ab81d97d388593fba53fb9c133ae5e5efacfebd876503b47494101.png" />
+</div>
 </div>
 <p>You may get a graph similar to the following.</p>
 <p><img alt="" src="practical3/images/kmeanstime.png" /></p>
@@ -1116,7 +1363,7 @@ We start with <strong>KMeans</strong>.</p>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">MiniBatchKMeans</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1136,6 +1383,34 @@ We start with <strong>KMeans</strong>.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  1 : 0.04336118698120117
+Total time:  2 : 0.008227825164794922
+Total time:  3 : 0.024311304092407227
+Total time:  4 : 0.03538846969604492
+Total time:  5 : 0.02809429168701172
+Total time:  6 : 0.010925054550170898
+Total time:  7 : 0.011761188507080078
+Total time:  8 : 0.012150049209594727
+Total time:  9 : 0.012189865112304688
+Total time:  10 : 0.01874709129333496
+Total time:  11 : 0.026663780212402344
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  12 : 0.08718681335449219
+Total time:  13 : 0.04896974563598633
+Total time:  14 : 0.014187335968017578
+Total time:  15 : 0.06274819374084473
+Total time:  16 : 0.03384590148925781
+Total time:  17 : 0.019850492477416992
+Total time:  18 : 0.016289710998535156
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total time:  19 : 0.10709333419799805
+</pre></div>
+</div>
+<img alt="../_images/78556d796412ab23bd49c460dbbf551e2c578bfa7aed8159bd1c91068caa9d8c.png" src="../_images/78556d796412ab23bd49c460dbbf551e2c578bfa7aed8159bd1c91068caa9d8c.png" />
+</div>
 </div>
 <p>You may get a graph similar to the following.</p>
 <p><img alt="" src="practical3/images/minibatchkmeanstime.png" /></p>
@@ -1154,7 +1429,7 @@ black) to distinguish the cluster centers from the two algorithms.</p>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">MiniBatchKMeans</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="n">cluster_count</span> <span class="o">=</span> <span class="mi">10</span>
@@ -1195,6 +1470,12 @@ black) to distinguish the cluster centers from the two algorithms.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f703cd18be0&gt;
+</pre></div>
+</div>
+<img alt="../_images/0f66fa97ad785eb5997080359f738615dfe7ad4e66fab3f8ed54b21d8230ab08.png" src="../_images/0f66fa97ad785eb5997080359f738615dfe7ad4e66fab3f8ed54b21d8230ab08.png" />
+</div>
 </div>
 <p><img alt="" src="practical3/images/scatterplots.png" />
 We would like to see how the individual pixel values have been
@@ -1209,7 +1490,7 @@ clustered. Run the following program a couple of times.</p>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
 <span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">MiniBatchKMeans</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="n">cluster_count</span> <span class="o">=</span> <span class="mi">10</span>
@@ -1359,6 +1640,9 @@ clustered. Run the following program a couple of times.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/052658eab242e2d1b612e661e206ccfd935e9e3176b4083404e99f1614237f77.png" src="../_images/052658eab242e2d1b612e661e206ccfd935e9e3176b4083404e99f1614237f77.png" />
+</div>
 </div>
 <p><img alt="" src="practical3/images/kmeansminibatchcomparison.png" />
 What are your conclusions?</p>
@@ -1378,7 +1662,7 @@ What are your conclusions?</p>
 
 <span class="n">cluster_count</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Calculating the clusters</span>
@@ -1416,6 +1700,9 @@ What are your conclusions?</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/b431e9b2e956374f4a0d4f743dc4b7c2ee849877e8000f84474585460776fa33.png" src="../_images/b431e9b2e956374f4a0d4f743dc4b7c2ee849877e8000f84474585460776fa33.png" />
+</div>
 </div>
 <p>Compare the two approaches (MiniBatchKMeans vs. KMeans)?</p>
 <div class="cell docutils container">
@@ -1430,7 +1717,7 @@ What are your conclusions?</p>
 
 <span class="n">cluster_count</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../../images/flower.jpg&quot;</span><span class="p">)</span>
+<span class="n">imgfile</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;../images/flower.jpg&quot;</span><span class="p">)</span>
 <span class="n">numarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">imgfile</span><span class="o">.</span><span class="n">getdata</span><span class="p">(),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Calculating the clusters</span>
@@ -1467,6 +1754,9 @@ What are your conclusions?</p>
 <span class="p">);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a8f7e22c88a8e219028b4d383ee9fae354f04cf54cbf741c299afe194b193184.png" src="../_images/a8f7e22c88a8e219028b4d383ee9fae354f04cf54cbf741c299afe194b193184.png" />
 </div>
 </div>
 </section>

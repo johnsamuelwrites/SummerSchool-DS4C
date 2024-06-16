@@ -415,7 +415,7 @@ datatypes (U100, i4), where U100 corresponds to 100-character unicode string and
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/pl.csv&quot;</span><span class="p">,</span>  <span class="c1"># Change this value to the path of your CSV file</span>
+    <span class="s2">&quot;../data/pl.csv&quot;</span><span class="p">,</span>  <span class="c1"># Change this value to the path of your CSV file</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># skip the first row, since it&#39;s the header</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>  <span class="c1"># the separator is comma since it is a CSV file</span>
@@ -426,52 +426,44 @@ datatypes (U100, i4), where U100 corresponds to 100-character unicode string and
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="s2">&quot;../../data/pl.csv&quot;</span><span class="p">,</span>  <span class="c1"># Change this value to the path of your CSV file</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># skip the first row, since it&#39;s the header</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>  <span class="c1"># the separator is comma since it is a CSV file</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>  <span class="c1"># UTF-8 encoding</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py:1380,</span> in <span class="ni">loadtxt</span><span class="nt">(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1377</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">delimiter</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1378</span>     <span class="n">delimiter</span> <span class="o">=</span> <span class="n">delimiter</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1380</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">_read</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="n">comment</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delimiter</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1381</span>             <span class="n">converters</span><span class="o">=</span><span class="n">converters</span><span class="p">,</span> <span class="n">skiplines</span><span class="o">=</span><span class="n">skiprows</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">usecols</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1382</span>             <span class="n">unpack</span><span class="o">=</span><span class="n">unpack</span><span class="p">,</span> <span class="n">ndmin</span><span class="o">=</span><span class="n">ndmin</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1383</span>             <span class="n">max_rows</span><span class="o">=</span><span class="n">max_rows</span><span class="p">,</span> <span class="n">quote</span><span class="o">=</span><span class="n">quotechar</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1385</span> <span class="k">return</span> <span class="n">arr</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py:997,</span> in <span class="ni">_read</span><span class="nt">(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)</span>
-<span class="g g-Whitespace">    </span><span class="mi">995</span>     <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">996</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">997</span>     <span class="n">fh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">_datasource</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">998</span>     <span class="k">if</span> <span class="n">encoding</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">999</span>         <span class="n">encoding</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fh</span><span class="p">,</span> <span class="s1">&#39;encoding&#39;</span><span class="p">,</span> <span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_datasource.py:192,</span> in <span class="ni">open</span><span class="nt">(path, mode, destpath, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">156</span><span class="sd"> Open `path` with `mode` and return the file object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">188</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">191</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">DataSource</span><span class="p">(</span><span class="n">destpath</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">192</span> <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/numpy/lib/_datasource.py:532,</span> in <span class="ni">DataSource.open</span><span class="nt">(self, path, mode, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">529</span>     <span class="k">return</span> <span class="n">_file_openers</span><span class="p">[</span><span class="n">ext</span><span class="p">](</span><span class="n">found</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>                               <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">532</span>     <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> not found.&quot;</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: ../../data/pl.csv not found.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;ENIAC coding system&#39;, 1943) (&#39;ENIAC Short Code&#39;, 1946)
+ (&#39;Von Neumann and Goldstine graphing system&#39;, 1946)
+ (&#39;ARC Assembly&#39;, 1947) (&#39;Plankalkül&#39;, 1948) (&#39;CPC Coding scheme&#39;, 1948)
+ (&#39;Curry notation system&#39;, 1948) (&#39;Short Code&#39;, 1949)
+ (&#39;assembly language&#39;, 1949) (&#39;Short Code&#39;, 1950) (&#39;G-code&#39;, 1950)
+ (&#39;Birkbeck Assembler&#39;, 1950) (&#39;Superplan&#39;, 1951) (&#39;ALGAE&#39;, 1951)
+ (&#39;Intermediate Programming Language&#39;, 1951)
+ (&#39;Regional Assembly Language&#39;, 1951)
+ (&#39;Boehm unnamed coding system&#39;, 1951) (&#39;Klammerausdrücke&#39;, 1951)
+ (&#39;OMNIBAC Symbolic Assembler&#39;, 1951) (&#39;Stanislaus&#39;, 1951)
+ (&#39;Whirlwind assembler&#39;, 1951) (&#39;Rochester assembler&#39;, 1951)
+ (&#39;Sort Merge Generator&#39;, 1951) (&#39;autocode&#39;, 1952) (&#39;A-0 System&#39;, 1952)
+ (&#39;Editing Generator&#39;, 1952) (&#39;COMPOOL&#39;, 1952) (&#39;Speedcoding&#39;, 1953)
+ (&#39;READ/PRINT&#39;, 1953) (&#39;Fortran&#39;, 1954) (&#39;ARITH-MATIC&#39;, 1954)
+ (&#39;autocode&#39;, 1954) (&#39;Laning and Zierler system&#39;, 1954)
+ (&#39;MATH-MATIC&#39;, 1954) (&#39;MATRIX MATH&#39;, 1954) (&#39;FLOW-MATIC&#39;, 1955)
+ (&#39;PACT&#39;, 1955) (&#39;BACAIC&#39;, 1955) (&#39;Freiburger Code&#39;, 1955)
+ (&#39;Sequentielle Formelübersetzung&#39;, 1955) (&#39;Internal Translator&#39;, 1955)
+ (&#39;PRINT&#39;, 1955) (&#39;Information Processing Language&#39;, 1956)
+ (&#39;FORTRAN for the IBM 704&#39;, 1956) (&#39;Fortran&#39;, 1957) (&#39;COMTRAN&#39;, 1957)
+ (&#39;GEORGE&#39;, 1957) (&#39;UNICODE&#39;, 1957) (&#39;ALGOL 58&#39;, 1958) (&#39;Lisp&#39;, 1958)
+ (&#39;ALGOL&#39;, 1958) (&#39;FORTRAN III&#39;, 1958) (&#39;FORTRAN II&#39;, 1958)
+ (&#39;JOVIAL&#39;, 1959) (&#39;TRAC&#39;, 1959) (&#39;COBOL&#39;, 1959) (&#39;MAD&#39;, 1959)
+ (&#39;Lisp&#39;, 1959) (&#39;FACT&#39;, 1959) (&#39;COBOL&#39;, 1960) (&#39;ALCOR&#39;, 1960)
+ (&#39;ALGOL 60&#39;, 1960) (&#39;FORTRAN IV&#39;, 1961) (&#39;TECO&#39;, 1962) (&#39;SNOBOL&#39;, 1962)
+ (&#39;APL&#39;, 1962) (&#39;Simula&#39;, 1962) (&#39;CORC&#39;, 1962) (&#39;CPL&#39;, 1963)
+ (&#39;JOSS&#39;, 1963) (&#39;P′′&#39;, 1964) (&#39;Report Program Generator&#39;, 1964)
+ (&#39;TRAC&#39;, 1964) (&#39;BASIC&#39;, 1964) (&#39;COWSEL&#39;, 1964) (&#39;MARK IV&#39;, 1964)
+ (&#39;MIMIC&#39;, 1964) (&#39;PL/I&#39;, 1964) (&#39;Speakeasy&#39;, 1964) (&#39;IBM RPG II&#39;, 1965)
+ (&#39;Atlas Autocode&#39;, 1965) (&#39;TELCOMP&#39;, 1965) (&#39;Euler&#39;, 1966)
+ (&#39;ISWIM&#39;, 1966) (&#39;ALGOL W&#39;, 1966)
+ (&#39;Massachusetts General Hospital Utility Multi-Programming System&#39;, 1966)
+ (&#39;JOSS&#39;, 1966) (&#39;Coral 66&#39;, 1966) (&#39;BCPL&#39;, 1966) (&#39;APL&#39;, 1966)
+ (&#39;FORTRAN 66&#39;, 1966)
+ (&#39;Massachusetts General Hospital Utility Multi-Programming System&#39;, 1967)
+ (&#39;Hop&#39;, 1967) (&#39;XPL&#39;, 1967) (&#39;Interlisp&#39;, 1967) (&#39;BCPL&#39;, 1967)
+ (&#39;Simula&#39;, 1967) (&#39;Space Programming Language&#39;, 1967) (&#39;PILOT&#39;, 1968)
+ (&#39;ALGOL 68&#39;, 1968)]
 </pre></div>
 </div>
 </div>
@@ -501,13 +493,55 @@ tsv file.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
-    <span class="s2">&quot;../../data/pl.tsv&quot;</span><span class="p">,</span>  <span class="c1"># Change this value to the path of your CSV file</span>
+    <span class="s2">&quot;../data/pl.tsv&quot;</span><span class="p">,</span>  <span class="c1"># Change this value to the path of your CSV file</span>
     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;names&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">),</span> <span class="s2">&quot;formats&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;U100&quot;</span><span class="p">,</span> <span class="s2">&quot;i4&quot;</span><span class="p">)},</span>
     <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
     <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;ENIAC coding system&#39;, 1943) (&#39;ENIAC Short Code&#39;, 1946)
+ (&#39;Von Neumann and Goldstine graphing system&#39;, 1946)
+ (&#39;ARC Assembly&#39;, 1947) (&#39;Plankalkül&#39;, 1948) (&#39;CPC Coding scheme&#39;, 1948)
+ (&#39;Curry notation system&#39;, 1948) (&#39;Short Code&#39;, 1949)
+ (&#39;assembly language&#39;, 1949) (&#39;Short Code&#39;, 1950)
+ (&#39;Birkbeck Assembler&#39;, 1950) (&#39;G-code&#39;, 1950) (&#39;Superplan&#39;, 1951)
+ (&#39;ALGAE&#39;, 1951) (&#39;Intermediate Programming Language&#39;, 1951)
+ (&#39;Regional Assembly Language&#39;, 1951)
+ (&#39;Boehm unnamed coding system&#39;, 1951) (&#39;Klammerausdrücke&#39;, 1951)
+ (&#39;OMNIBAC Symbolic Assembler&#39;, 1951) (&#39;Stanislaus&#39;, 1951)
+ (&#39;Whirlwind assembler&#39;, 1951) (&#39;Rochester assembler&#39;, 1951)
+ (&#39;Sort Merge Generator&#39;, 1951) (&#39;Editing Generator&#39;, 1952)
+ (&#39;COMPOOL&#39;, 1952) (&#39;autocode&#39;, 1952) (&#39;A-0 System&#39;, 1952)
+ (&#39;READ/PRINT&#39;, 1953) (&#39;Speedcoding&#39;, 1953) (&#39;Fortran&#39;, 1954)
+ (&#39;MATRIX MATH&#39;, 1954) (&#39;autocode&#39;, 1954) (&#39;ARITH-MATIC&#39;, 1954)
+ (&#39;Laning and Zierler system&#39;, 1954) (&#39;MATH-MATIC&#39;, 1954)
+ (&#39;FLOW-MATIC&#39;, 1955) (&#39;BACAIC&#39;, 1955) (&#39;Freiburger Code&#39;, 1955)
+ (&#39;Sequentielle Formelübersetzung&#39;, 1955) (&#39;Internal Translator&#39;, 1955)
+ (&#39;PRINT&#39;, 1955) (&#39;PACT&#39;, 1955) (&#39;Information Processing Language&#39;, 1956)
+ (&#39;FORTRAN for the IBM 704&#39;, 1956) (&#39;Fortran&#39;, 1957) (&#39;UNICODE&#39;, 1957)
+ (&#39;COMTRAN&#39;, 1957) (&#39;GEORGE&#39;, 1957) (&#39;ALGOL 58&#39;, 1958) (&#39;Lisp&#39;, 1958)
+ (&#39;FORTRAN III&#39;, 1958) (&#39;FORTRAN II&#39;, 1958) (&#39;ALGOL&#39;, 1958)
+ (&#39;JOVIAL&#39;, 1959) (&#39;TRAC&#39;, 1959) (&#39;COBOL&#39;, 1959) (&#39;Lisp&#39;, 1959)
+ (&#39;MAD&#39;, 1959) (&#39;FACT&#39;, 1959) (&#39;COBOL&#39;, 1960) (&#39;COBOL&#39;, 1960)
+ (&#39;ALGOL 60&#39;, 1960) (&#39;ALCOR&#39;, 1960) (&#39;FORTRAN IV&#39;, 1961) (&#39;SNOBOL&#39;, 1962)
+ (&#39;TECO&#39;, 1962) (&#39;Simula&#39;, 1962) (&#39;APL&#39;, 1962) (&#39;CORC&#39;, 1962)
+ (&#39;CPL&#39;, 1963) (&#39;JOSS&#39;, 1963) (&#39;P′′&#39;, 1964)
+ (&#39;Report Program Generator&#39;, 1964) (&#39;TRAC&#39;, 1964) (&#39;BASIC&#39;, 1964)
+ (&#39;COWSEL&#39;, 1964) (&#39;PL/I&#39;, 1964) (&#39;MARK IV&#39;, 1964) (&#39;MIMIC&#39;, 1964)
+ (&#39;Speakeasy&#39;, 1964) (&#39;IBM RPG II&#39;, 1965) (&#39;Atlas Autocode&#39;, 1965)
+ (&#39;TELCOMP&#39;, 1965) (&#39;Euler&#39;, 1966) (&#39;ISWIM&#39;, 1966) (&#39;ALGOL W&#39;, 1966)
+ (&#39;JOSS&#39;, 1966)
+ (&#39;Massachusetts General Hospital Utility Multi-Programming System&#39;, 1966)
+ (&#39;BCPL&#39;, 1966) (&#39;Coral 66&#39;, 1966) (&#39;FORTRAN 66&#39;, 1966) (&#39;APL&#39;, 1966)
+ (&#39;Hop&#39;, 1967)
+ (&#39;Massachusetts General Hospital Utility Multi-Programming System&#39;, 1967)
+ (&#39;Space Programming Language&#39;, 1967) (&#39;BCPL&#39;, 1967) (&#39;Interlisp&#39;, 1967)
+ (&#39;Simula&#39;, 1967) (&#39;XPL&#39;, 1967) (&#39;PILOT&#39;, 1968)]
 </pre></div>
 </div>
 </div>
@@ -522,11 +556,21 @@ tab ((\t)).</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
+</pre></div>
+</div>
+</div>
 </div>
 <p>You can also display the output of variables and methods in a notebook without <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
 </pre></div>
 </div>
 </div>
@@ -561,9 +605,27 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/pl.json&quot;</span><span class="p">))</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../data/pl.json&quot;</span><span class="p">))</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">dataframe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                languageLabel  year
+0                         ENIAC coding system  1943
+1                            ENIAC Short Code  1946
+2   Von Neumann and Goldstine graphing system  1946
+3                                ARC Assembly  1947
+4                                  Plankalkül  1948
+..                                        ...   ...
+95                                       BCPL  1967
+96                                  Interlisp  1967
+97                                     Simula  1967
+98                                        XPL  1967
+99                                      PILOT  1968
+
+[100 rows x 2 columns]
 </pre></div>
 </div>
 </div>
@@ -575,11 +637,110 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>languageLabel</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ENIAC coding system</td>
+      <td>1943</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ENIAC Short Code</td>
+      <td>1946</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Von Neumann and Goldstine graphing system</td>
+      <td>1946</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ARC Assembly</td>
+      <td>1947</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Plankalkül</td>
+      <td>1948</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>BCPL</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Interlisp</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Simula</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>XPL</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>PILOT</td>
+      <td>1968</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 2 columns</p>
+</div></div></div>
 </div>
 <p>To display the values of the column <strong>year</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     1943
+1     1946
+2     1946
+3     1947
+4     1948
+      ... 
+95    1967
+96    1967
+97    1967
+98    1967
+99    1968
+Name: year, Length: 100, dtype: object
 </pre></div>
 </div>
 </div>
@@ -591,6 +752,22 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0                           ENIAC coding system
+1                              ENIAC Short Code
+2     Von Neumann and Goldstine graphing system
+3                                  ARC Assembly
+4                                    Plankalkül
+                        ...                    
+95                                         BCPL
+96                                    Interlisp
+97                                       Simula
+98                                          XPL
+99                                        PILOT
+Name: languageLabel, Length: 100, dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 <p>Getting some important information like count, min, max using <code class="docutils literal notranslate"><span class="pre">describe()</span></code></p>
 <div class="cell docutils container">
@@ -599,11 +776,66 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>languageLabel</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>100</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>88</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>COBOL</td>
+      <td>1951</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>3</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>To display the unique values of the column <strong>year</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;1943&#39;, &#39;1946&#39;, &#39;1947&#39;, &#39;1948&#39;, &#39;1949&#39;, &#39;1950&#39;, &#39;1951&#39;, &#39;1952&#39;,
+       &#39;1953&#39;, &#39;1954&#39;, &#39;1955&#39;, &#39;1956&#39;, &#39;1957&#39;, &#39;1958&#39;, &#39;1959&#39;, &#39;1960&#39;,
+       &#39;1961&#39;, &#39;1962&#39;, &#39;1963&#39;, &#39;1964&#39;, &#39;1965&#39;, &#39;1966&#39;, &#39;1967&#39;, &#39;1968&#39;],
+      dtype=object)
 </pre></div>
 </div>
 </div>
@@ -615,6 +847,35 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;ENIAC coding system&#39;, &#39;ENIAC Short Code&#39;,
+       &#39;Von Neumann and Goldstine graphing system&#39;, &#39;ARC Assembly&#39;,
+       &#39;Plankalkül&#39;, &#39;CPC Coding scheme&#39;, &#39;Curry notation system&#39;,
+       &#39;Short Code&#39;, &#39;assembly language&#39;, &#39;Birkbeck Assembler&#39;, &#39;G-code&#39;,
+       &#39;Superplan&#39;, &#39;ALGAE&#39;, &#39;Intermediate Programming Language&#39;,
+       &#39;Regional Assembly Language&#39;, &#39;Boehm unnamed coding system&#39;,
+       &#39;Klammerausdrücke&#39;, &#39;OMNIBAC Symbolic Assembler&#39;, &#39;Stanislaus&#39;,
+       &#39;Whirlwind assembler&#39;, &#39;Rochester assembler&#39;,
+       &#39;Sort Merge Generator&#39;, &#39;Editing Generator&#39;, &#39;COMPOOL&#39;, &#39;autocode&#39;,
+       &#39;A-0 System&#39;, &#39;READ/PRINT&#39;, &#39;Speedcoding&#39;, &#39;Fortran&#39;,
+       &#39;MATRIX MATH&#39;, &#39;ARITH-MATIC&#39;, &#39;Laning and Zierler system&#39;,
+       &#39;MATH-MATIC&#39;, &#39;FLOW-MATIC&#39;, &#39;BACAIC&#39;, &#39;Freiburger Code&#39;,
+       &#39;Sequentielle Formelübersetzung&#39;, &#39;Internal Translator&#39;, &#39;PRINT&#39;,
+       &#39;PACT&#39;, &#39;Information Processing Language&#39;,
+       &#39;FORTRAN for the IBM 704&#39;, &#39;UNICODE&#39;, &#39;COMTRAN&#39;, &#39;GEORGE&#39;,
+       &#39;ALGOL 58&#39;, &#39;Lisp&#39;, &#39;FORTRAN III&#39;, &#39;FORTRAN II&#39;, &#39;ALGOL&#39;, &#39;JOVIAL&#39;,
+       &#39;TRAC&#39;, &#39;COBOL&#39;, &#39;MAD&#39;, &#39;FACT&#39;, &#39;ALGOL 60&#39;, &#39;ALCOR&#39;, &#39;FORTRAN IV&#39;,
+       &#39;SNOBOL&#39;, &#39;TECO&#39;, &#39;Simula&#39;, &#39;APL&#39;, &#39;CORC&#39;, &#39;CPL&#39;, &#39;JOSS&#39;, &#39;P′′&#39;,
+       &#39;Report Program Generator&#39;, &#39;BASIC&#39;, &#39;COWSEL&#39;, &#39;PL/I&#39;, &#39;MARK IV&#39;,
+       &#39;MIMIC&#39;, &#39;Speakeasy&#39;, &#39;IBM RPG II&#39;, &#39;Atlas Autocode&#39;, &#39;TELCOMP&#39;,
+       &#39;Euler&#39;, &#39;ISWIM&#39;, &#39;ALGOL W&#39;,
+       &#39;Massachusetts General Hospital Utility Multi-Programming System&#39;,
+       &#39;BCPL&#39;, &#39;Coral 66&#39;, &#39;FORTRAN 66&#39;, &#39;Hop&#39;,
+       &#39;Space Programming Language&#39;, &#39;Interlisp&#39;, &#39;XPL&#39;, &#39;PILOT&#39;],
+      dtype=object)
+</pre></div>
+</div>
+</div>
 </div>
 <p>To sort the values by one or more columns:</p>
 <div class="cell docutils container">
@@ -623,6 +884,89 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>languageLabel</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ENIAC coding system</td>
+      <td>1943</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ENIAC Short Code</td>
+      <td>1946</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Von Neumann and Goldstine graphing system</td>
+      <td>1946</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ARC Assembly</td>
+      <td>1947</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Plankalkül</td>
+      <td>1948</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>XPL</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>Massachusetts General Hospital Utility Multi-P...</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>Hop</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>Space Programming Language</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>PILOT</td>
+      <td>1968</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 2 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -630,6 +974,89 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>languageLabel</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ENIAC coding system</td>
+      <td>1943</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ENIAC Short Code</td>
+      <td>1946</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Von Neumann and Goldstine graphing system</td>
+      <td>1946</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ARC Assembly</td>
+      <td>1947</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>CPC Coding scheme</td>
+      <td>1948</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>Massachusetts General Hospital Utility Multi-P...</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Simula</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>Space Programming Language</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>XPL</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>PILOT</td>
+      <td>1968</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 2 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -637,11 +1064,101 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>languageLabel</th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>26</th>
+      <td>A-0 System</td>
+      <td>1952</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>ALCOR</td>
+      <td>1960</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>ALGAE</td>
+      <td>1951</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>ALGOL</td>
+      <td>1958</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>ALGOL 58</td>
+      <td>1958</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Whirlwind assembler</td>
+      <td>1951</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>XPL</td>
+      <td>1967</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>assembly language</td>
+      <td>1949</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>autocode</td>
+      <td>1954</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>autocode</td>
+      <td>1952</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 2 columns</p>
+</div></div></div>
 </div>
 <p>To obtain the data types of the columns:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>languageLabel    object
+year             object
+dtype: object
 </pre></div>
 </div>
 </div>
@@ -680,6 +1197,24 @@ this
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    year                              languageLabel
+0   1942                                 Plankalkül
+1   1943                        ENIAC coding system
+2   1946                           ENIAC Short Code
+3   1946  Von Neumann and Goldstine graphing system
+4   1948                          CPC Coding scheme
+..   ...                                        ...
+95  1967                 Space Programming Language
+96  1967                                        XPL
+97  1968                                      Refal
+98  1968                                     MAPPER
+99  1968                                      PILOT
+
+[100 rows x 2 columns]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -687,10 +1222,106 @@ this
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>languageLabel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1942</td>
+      <td>Plankalkül</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1943</td>
+      <td>ENIAC coding system</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1946</td>
+      <td>ENIAC Short Code</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1946</td>
+      <td>Von Neumann and Goldstine graphing system</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1948</td>
+      <td>CPC Coding scheme</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>1967</td>
+      <td>Space Programming Language</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>1967</td>
+      <td>XPL</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>1968</td>
+      <td>Refal</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>1968</td>
+      <td>MAPPER</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>1968</td>
+      <td>PILOT</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 2 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     100.000000
+mean     1958.300000
+std         6.500194
+min      1942.000000
+25%      1952.750000
+50%      1959.000000
+75%      1964.000000
+max      1968.000000
+Name: year, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -701,10 +1332,26 @@ this
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count          100
+unique          99
+top       autocode
+freq             2
+Name: languageLabel, dtype: object
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>year              int32
+languageLabel    object
+dtype: object
 </pre></div>
 </div>
 </div>
@@ -722,6 +1369,132 @@ languages released in a year.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>languageLabel</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1942</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1943</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1946</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1948</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1949</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1950</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1951</th>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>1952</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1953</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1954</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1955</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>1956</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1957</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>1958</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1959</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1960</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>1961</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1962</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1963</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1964</th>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>1965</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1966</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>1967</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>1968</th>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>You can also use multiple aggregate functions using agg()</p>
 <div class="cell docutils container">
@@ -731,6 +1504,140 @@ languages released in a year.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>languageLabel</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1942</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1943</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1946</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1948</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1949</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1950</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1951</th>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>1952</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1953</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1954</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1955</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>1956</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1957</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>1958</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1959</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>1960</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>1961</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1962</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1963</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>1964</th>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>1965</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1966</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>1967</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>1968</th>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Till now, we worked with tables having two columns. Now we focus on
 tables with three columns (programming language, year, paradigm). Copy
@@ -743,7 +1650,7 @@ to your working directory. And test the following program.</p>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
-<span class="n">jsondata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../../data/plparadigm.json&quot;</span><span class="p">))</span>
+<span class="n">jsondata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../data/plparadigm.json&quot;</span><span class="p">))</span>
 <span class="n">array</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">jsondata</span><span class="p">:</span>
@@ -759,6 +1666,99 @@ to your working directory. And test the following program.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>languageLabel</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th>paradigmLabel</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1948</th>
+      <th>procedural programming</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1949</th>
+      <th>non-structured programming</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>procedural programming</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1950</th>
+      <th>procedural programming</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1953</th>
+      <th>procedural programming</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">1970</th>
+      <th>imperative programming</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>procedural programming</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>structured programming</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">1971</th>
+      <th>functional programming</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>knowledge representation and reasoning</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>73 rows × 1 columns</p>
+</div></div></div>
 </div>
 <p>Now test the following program. Compare the difference in output.</p>
 <div class="cell docutils container">
@@ -768,6 +1768,96 @@ to your working directory. And test the following program.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>languageLabel</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>paradigmLabel</th>
+      <th>year</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="4" valign="top">array programming</th>
+      <th>1954</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1957</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1962</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1966</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>assembly language</th>
+      <th>1956</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">structured programming</th>
+      <th>1957</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1958</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1962</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1966</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1970</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>73 rows × 1 columns</p>
+</div></div></div>
 </div>
 <p>Your next goal is to run the following query to get the population
 information of different countries (limited to 10000 rows). Run the
@@ -841,6 +1931,15 @@ the above query results) since 2010.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sparqlwrapper in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (2.0.0)
+Requirement already satisfied: rdflib&gt;=6.1.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from sparqlwrapper) (7.0.0)
+Requirement already satisfied: isodate&lt;0.7.0,&gt;=0.6.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from rdflib&gt;=6.1.1-&gt;sparqlwrapper) (0.6.1)
+Requirement already satisfied: pyparsing&lt;4,&gt;=2.1.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from rdflib&gt;=6.1.1-&gt;sparqlwrapper) (3.1.2)
+Requirement already satisfied: six in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from isodate&lt;0.7.0,&gt;=0.6.0-&gt;rdflib&gt;=6.1.1-&gt;sparqlwrapper) (1.16.0)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -895,6 +1994,94 @@ the above query results) since 2010.</p></li>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ville</th>
+      <th>pays</th>
+      <th>image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Saratov</td>
+      <td>Russie</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Erode</td>
+      <td>Inde</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Thimphou</td>
+      <td>Bhoutan</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bichkek</td>
+      <td>Kirghizistan</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Glasgow</td>
+      <td>Royaume-Uni</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Las Piñas</td>
+      <td>Philippines</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Samarcande</td>
+      <td>Ouzbékistan</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Sébastopol</td>
+      <td>Russie</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Orléans</td>
+      <td>France</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Oulan-Oudé</td>
+      <td>Russie</td>
+      <td>http://commons.wikimedia.org/wiki/Special:File...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>We will now download these images</p>
 <div class="cell docutils container">
@@ -920,6 +2107,21 @@ the above query results) since 2010.</p></li>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">download_image</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    200
+1    200
+2    200
+3    200
+4    200
+5    200
+6    200
+7    200
+8    200
+9    200
+Name: image, dtype: int64
 </pre></div>
 </div>
 </div>

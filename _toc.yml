@@ -13,7 +13,6 @@ parts:
   chapters:
   - file: examples/Examples.ipynb
   - file: examples/decisiontree.ipynb
-  - file: examples/Examples.ipynb
   - file: examples/Examples-Visualization.ipynb
   - file: examples/interaction.ipynb
   - file: examples/mlp.ipynb

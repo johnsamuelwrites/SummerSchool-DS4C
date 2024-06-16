@@ -8,4 +8,21 @@ parts:
   - file: practical2/practical2.ipynb
   - file: practical3/practical3.ipynb
   - file: practical4/practical4.ipynb
+- caption: Additional Examples
+  numbered: false
+  chapters:
   - file: examples/Examples.ipynb
+  - file: examples/decisiontree.ipynb
+  - file: examples/Examples.ipynb
+  - file: examples/Examples-Visualization.ipynb
+  - file: examples/interaction.ipynb
+  - file: examples/mlp.ipynb
+  - file: examples/perceptron.ipynb
+  - file: examples/README.md
+  - file: examples/recommendation.ipynb
+  - file: examples/rfc.ipynb
+  - file: examples/svm.ipynb
+- caption: References
+  numbered: false
+  chapters:
+  - file: references.md 

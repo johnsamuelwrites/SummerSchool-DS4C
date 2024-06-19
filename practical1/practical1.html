@@ -174,14 +174,6 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Programming Session 1</a></li>
-
-
-
-
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../practical2/practical2.html">Programming Session 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../practical3/practical3.html">Programming Session 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../practical4/practical4.html">Programming Session 4</a></li>
@@ -356,25 +348,68 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Programming Session 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">Numpy</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-operations">Matrix operations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transposition">Matrix Transposition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-a-matrix-to-two-horizontally-and-vertically">Split a matrix to two, horizontally and vertically</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-two-dimensional-matrices">Operations on two-dimensional matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-the-shape-of-a-matrix">Change the shape of a matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-a-matrix-with-random-numbers">Creation of a matrix with random numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1. Comments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">2. Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation-of-two-strings">3. Concatenation of two strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">4. Lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-non-modifiable-lists">5. Tuples (non-modifiable lists)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">6. Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#union">union()</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection">intersection()</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">difference()</a></li>
 </ul>
 </li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-expressions">1. Conditional Expressions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-statement">The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-else-statement">The <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-statement-without-else">The <code class="docutils literal notranslate"><span class="pre">if-elif</span></code> statement (without <code class="docutils literal notranslate"><span class="pre">else</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key Points:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">2. Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#range">3. Range</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split">4. split()</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort">1. Sort</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-decreasing-order">2. Sort (decreasing order)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum">3. minimum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum">4. maximum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted">5. sorted()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reversed">6. reversed()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">7. zip()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enumerate">8. enumerate()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings">9. Working with Strings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">1. Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#itemgetter">2. itemgetter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction-with-user">3. Interaction with user</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#files">1. Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readline">2. readline()</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-numpy">1. Importing Numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-operations">2. Matrix operations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transposition">3. Matrix Transposition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-a-matrix-to-two-horizontally-and-vertically">4. Split a matrix to two, horizontally and vertically</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-two-dimensional-matrices">5. Operations on two-dimensional matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-the-shape-of-a-matrix">6. Change the shape of a matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-a-matrix-with-random-numbers">7. Creation of a matrix with random numbers</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -385,11 +420,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="programming-session-1">
+  <section class="tex2jax_ignore mathjax_ignore" id="programming-session-1">
 <h1>Programming Session 1<a class="headerlink" href="#programming-session-1" title="Link to this heading">#</a></h1>
-</section>
 <section id="goals">
-<h1>Goals<a class="headerlink" href="#goals" title="Link to this heading">#</a></h1>
+<h2>Goals<a class="headerlink" href="#goals" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Understanding fundamentals of Python programming:</p></li>
 <li><p>Variables, data types, lists, sets and tuples.</p></li>
@@ -401,8 +435,10 @@ document.write(`
 </ul>
 </section>
 <section id="exercise-1">
-<h1>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h1>
-<p>1. Comments</p>
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
+<section id="comments">
+<h3>1. Comments<a class="headerlink" href="#comments" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol is used for writing a comment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment</span>
@@ -416,7 +452,10 @@ document.write(`
 </div>
 </div>
 </div>
-<p>2. Variables</p>
+</section>
+<section id="variables">
+<h3>2. Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h3>
+<p>A variable is a symbolic name that references or holds a value, which can be of various data types such as numbers, strings, or objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a variable</span>
@@ -431,6 +470,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Variables are used to store values that can be manipulated; here, <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are assigned integer values, and <code class="docutils literal notranslate"><span class="pre">c</span></code> stores the result of their addition, which is then printed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
@@ -446,6 +486,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>A variable is assigned a floating-point value and then printed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># floating point numbers</span>
@@ -460,6 +501,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>The type() function in Python is used to determine the data type of a variable or a value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data types</span>
@@ -480,7 +522,10 @@ document.write(`
 </div>
 </div>
 </div>
-<p>3. Concatenation of two strings</p>
+</section>
+<section id="concatenation-of-two-strings">
+<h3>3. Concatenation of two strings<a class="headerlink" href="#concatenation-of-two-strings" title="Link to this heading">#</a></h3>
+<p>String concatenation in Python refers to the process of joining multiple strings together to create a new string. This can be achieved using the + operator. When you use + between two strings, Python combines them into a single string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># concatenation of two strings</span>
@@ -497,7 +542,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># concatenation of two strings</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># concatenation of two strings using variables</span>
 <span class="n">message1</span> <span class="o">=</span> <span class="s2">&quot;Hello &quot;</span>
 <span class="n">message2</span> <span class="o">=</span> <span class="s2">&quot;World!&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">message1</span> <span class="o">+</span> <span class="n">message2</span><span class="p">)</span>
@@ -539,7 +584,12 @@ document.write(`
 </div>
 </div>
 </div>
-<p>4. Lists</p>
+<p>Type conversion (or type casting) refers to the process of converting one data type into another.</p>
+<p><code class="docutils literal notranslate"><span class="pre">str(a)</span></code> converts the integer variable a into a string. This is necessary because you cannot directly concatenate a string (message1) with an integer (a) using the + operator without first converting the integer to a string.</p>
+</section>
+<section id="lists">
+<h3>4. Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h3>
+<p>A list is a collection of items, which can be of different data types, enclosed in square brackets [] and separated by commas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -553,6 +603,9 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Lists are ordered collections, and each element in a list has a specific position called an index. Indexing allows you to access individual elements in a list using their position.</p>
+<p>The index of the first element in a list is 0, the index of the second element is 1, and so on.</p>
+<p>Elements in a list can be accessed by specifying the list’s name followed by square brackets containing the index of the element you want to access.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -583,7 +636,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Why did you get this error? We are trying to access a element at an index that does not exist.</p>
+<p>Why did you get this error? The error occurs because the code is attempting to access an element in the list a at index 8, which does not exist. In Python (and in many programming languages), indexing of lists starts at 0 and goes up to len(a) - 1, where len(a) is the number of elements in the list a.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message1</span> <span class="o">=</span> <span class="s2">&quot;Hello! Python &quot;</span>
@@ -611,8 +664,7 @@ P
 </div>
 </div>
 </div>
-<p>The above code displayed the individual characters in the string (or list of characters).
-We will now get the length of this string.</p>
+<p>Strings behave like lists of characters in many respects, so you can access individual characters using indexing just like you would with elements in a list. The len() function is used to determine the number of characters (or elements) in the string (or list).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message1</span> <span class="o">=</span> <span class="s2">&quot;Hello! Python &quot;</span>
@@ -626,7 +678,7 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
-<p>Nous allons maintenant créer une liste d’entiers.</p>
+<p>We’ll now create a list of integers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -640,6 +692,8 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
+<p>The len() function is used to determine the number of elements in a list (or the length of any iterable object).
+When len() is applied to a list, it returns the number of elements (or items) present in that list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -656,6 +710,10 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
+<p>The <code class="docutils literal notranslate"><span class="pre">append()</span></code> method is used to add a single element to the end of an existing list. The syntax for using <code class="docutils literal notranslate"><span class="pre">append()</span></code> is <code class="docutils literal notranslate"><span class="pre">list_name.append(element)</span></code>, where <code class="docutils literal notranslate"><span class="pre">list_name</span></code> is the name of the list to which you want to add the element, and element is the item you want to add. The element can be of any data type, and it is added as the last item in the list.</p>
+<p>Elements in a list can be modified by assigning a new value to a specific index.
+List indexing starts at <code class="docutils literal notranslate"><span class="pre">0</span></code>, so <code class="docutils literal notranslate"><span class="pre">a[0]</span></code> refers to the first element of the list <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">a[1]</span></code> refers to the second element, and so on.
+You can directly assign a new value to any existing element in the list using this indexing method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -672,11 +730,10 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
-<p>Why did we get this error? We are modifying an element at a non-existing index.</p>
+<p>Uncomment the assignment statement and run the code below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uncomment the assignment statement and run the code</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
 <span class="c1"># a[6] = 20</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
@@ -688,6 +745,9 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
+<p>Why did we get this error? We are modifying an element at a non-existing index.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">insert()</span></code> method is used to insert an element into a list at a specified index. The syntax for <code class="docutils literal notranslate"><span class="pre">insert()</span></code> is <code class="docutils literal notranslate"><span class="pre">list_name.insert(index,</span> <span class="pre">element)</span></code>, where <code class="docutils literal notranslate"><span class="pre">list_name</span></code> is the name of the list, <code class="docutils literal notranslate"><span class="pre">index</span></code> is the position where you want to insert the element, and element is the item you want to insert.</p>
+<p>Elements after the specified index are shifted to the right to accommodate the new element.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -742,7 +802,13 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
-<p>5. Tuples (non-modifiable lists)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">insert()</span></code> method can be used to insert an element at any index within the current range of the list. If you specify an index that is greater than the current length of the list, Python will insert the new element at the end of the list.</p>
+</section>
+<section id="tuples-non-modifiable-lists">
+<h3>5. Tuples (non-modifiable lists)<a class="headerlink" href="#tuples-non-modifiable-lists" title="Link to this heading">#</a></h3>
+<p>A tuple is an ordered collection of elements, similar to a list, but tuples are immutable, meaning their contents cannot be changed after creation.
+Tuples are defined using parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> and elements are separated by commas.
+Tuples can contain elements of different data types and can even hold other tuples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
@@ -788,7 +854,12 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
-<p>6. Sets</p>
+<p>Tuples in Python are immutable, meaning their contents cannot be changed after they are created. This is in contrast to lists, which are mutable and allow modifications to their elements.</p>
+</section>
+<section id="sets">
+<h3>6. Sets<a class="headerlink" href="#sets" title="Link to this heading">#</a></h3>
+<p>A set is an unordered collection of unique elements. It does not allow duplicate elements. Sets are defined using curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code>, and elements are separated by commas.</p>
+<p>When you create a set with duplicate elements, Python automatically removes the duplicates, leaving only unique elements in the set.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A set is a collection of distinct elements</span>
@@ -803,6 +874,7 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
+<p>You can add elements to a set using the <code class="docutils literal notranslate"><span class="pre">add()</span></code> method and remove elements from a set using the <code class="docutils literal notranslate"><span class="pre">remove()</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">}</span>
@@ -876,10 +948,94 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
+<p>Sets in Python automatically remove duplicates. Tuples preserve the order of elements and allow duplicates, but are immutable. Lists also preserve the order of elements and allow duplicates.</p>
+<section id="union">
+<h4>union()<a class="headerlink" href="#union" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">union()</span></code> method or the <code class="docutils literal notranslate"><span class="pre">|</span></code> operator combines two sets into a new set that contains all unique elements from both sets. It returns a new set containing elements that are present in either <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, or both, without duplicates.
+The union operation does not modify the original sets <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>; instead, it creates and returns a new set with the combined elements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">}</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{70, 40, 10, 80, 50, 20, 90, 60, 30}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="intersection">
+<h4>intersection()<a class="headerlink" href="#intersection" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">intersection()</span></code> method or the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> operator returns a new set containing elements that are present in both sets <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.
+It computes the intersection of sets <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, meaning it includes only elements that are common to both sets.</p>
+<p>The intersection operation does not modify the original sets <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>; instead, it creates and returns a new set with the common elements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">}</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{10}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="difference">
+<h4>difference()<a class="headerlink" href="#difference" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">difference()</span></code> method or the <code class="docutils literal notranslate"><span class="pre">-</span></code> operator returns a new set containing elements that are present in set <code class="docutils literal notranslate"><span class="pre">a</span></code> but not in set <code class="docutils literal notranslate"><span class="pre">b</span></code>.
+It computes the difference between sets <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>, meaning it includes only elements from <code class="docutils literal notranslate"><span class="pre">a</span></code> that are not present in <code class="docutils literal notranslate"><span class="pre">b</span></code>.
+The difference operation does not modify the original sets <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>; instead, it creates and returns a new set with the elements from <code class="docutils literal notranslate"><span class="pre">a</span></code> that are not in <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">}</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{40, 50, 20, 30}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">}</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{80, 90, 60, 70}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 <section id="exercise-2">
-<h1>Exercise 2<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h1>
-<p>1. Conditional Expressions</p>
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h2>
+<section id="conditional-expressions">
+<h3>1. Conditional Expressions<a class="headerlink" href="#conditional-expressions" title="Link to this heading">#</a></h3>
+<p>Conditional statements (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>) allow you to control the flow of your program based on certain conditions. These statements help you execute specific blocks of code depending on whether conditions are <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<section id="the-if-statement">
+<h4>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement<a class="headerlink" href="#the-if-statement" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is used to execute a block of code only if a specified condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>. It can be followed by an optional <code class="docutils literal notranslate"><span class="pre">else</span></code> block.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
@@ -912,8 +1068,86 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
-<p>2. Loops</p>
-<p>Loops can also be used to access the elements at different indices.</p>
+</section>
+<section id="the-if-elif-else-statement">
+<h4>The <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> statement<a class="headerlink" href="#the-if-elif-else-statement" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> statement is used when you have multiple conditions to evaluate sequentially. It allows you to check for multiple conditions and execute a block of code as soon as one of the conditions is <code class="docutils literal notranslate"><span class="pre">True</span></code>. It can also have an optional <code class="docutils literal notranslate"><span class="pre">else</span></code> block at the end.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span><span class="p">:</span>
+    <span class="c1"># block of code to execute if condition1 is True</span>
+<span class="k">elif</span> <span class="n">condition2</span><span class="p">:</span>
+    <span class="c1"># block of code to execute if condition2 is True (optional)</span>
+<span class="k">elif</span> <span class="n">condition3</span><span class="p">:</span>
+    <span class="c1"># block of code to execute if condition3 is True (optional)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># block of code to execute if all conditions are False (optional)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="k">if</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b is less than 10&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b is equal to 10&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b is greater than 10&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b is greater than 10
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-if-elif-statement-without-else">
+<h4>The <code class="docutils literal notranslate"><span class="pre">if-elif</span></code> statement (without <code class="docutils literal notranslate"><span class="pre">else</span></code>)<a class="headerlink" href="#the-if-elif-statement-without-else" title="Link to this heading">#</a></h4>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">if-elif</span></code> without an <code class="docutils literal notranslate"><span class="pre">else</span></code> block. In this case, if none of the conditions are <code class="docutils literal notranslate"><span class="pre">True</span></code>, no block of code will be executed.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition1</span><span class="p">:</span>
+    <span class="c1"># block of code to execute if condition1 is True</span>
+<span class="k">elif</span> <span class="n">condition2</span><span class="p">:</span>
+    <span class="c1"># block of code to execute if condition2 is True (optional)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">if</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c is negative&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c is zero&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c is positive&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c is positive
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="key-points">
+<h3>Key Points:<a class="headerlink" href="#key-points" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">if</span></code> to execute a block of code based on a single condition.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> to evaluate multiple conditions sequentially and execute the corresponding block of code as soon as one condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">if-elif</span></code> without <code class="docutils literal notranslate"><span class="pre">else</span></code> when you have multiple conditions to check, but you do not need to execute any code if none of the conditions are <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p>Indentation is crucial in Python to denote blocks of code within conditional statements.</p></li>
+</ul>
+<p>Conditional statements are fundamental for controlling the logic and behavior of your Python programs based on different scenarios and conditions.</p>
+</section>
+<section id="loops">
+<h3>2. Loops<a class="headerlink" href="#loops" title="Link to this heading">#</a></h3>
+<p>Loops can also be used to access the elements at different indices. A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is used to iterate over a sequence (e.g., a list, tuple, string, or range).
+The loop variable (<code class="docutils literal notranslate"><span class="pre">i</span></code> in this case) takes on each element of the sequence one by one, allowing you to perform operations on each element inside the loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]:</span>
@@ -975,7 +1209,10 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
-<p>2. Range</p>
+</section>
+<section id="range">
+<h3>3. Range<a class="headerlink" href="#range" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop)</span></code> function generates a sequence of numbers starting from <code class="docutils literal notranslate"><span class="pre">start</span></code> up to (but not including) <code class="docutils literal notranslate"><span class="pre">stop</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
@@ -998,6 +1235,7 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
+<p><code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code> specifies the increment (or decrement) between each number in the sequence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
@@ -1015,21 +1253,7 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print() by default displays the message followed by a new line</span>
-<span class="c1"># But you can change its behaviour</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 2 4 6 8 
-</pre></div>
-</div>
-</div>
-</div>
+<p>When the <code class="docutils literal notranslate"><span class="pre">step</span></code> value is negative (-2 in the case below), the sequence counts downwards.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">):</span>
@@ -1055,8 +1279,25 @@ We will now get the length of this string.</p>
 </div>
 </div>
 </div>
-<p>split(): the function can be used to separate a string using a specified delimited.
-By default, the delimiter is a white space.</p>
+<p><code class="docutils literal notranslate"><span class="pre">print()</span></code> by default displays the message followed by a new line
+But you can change its behaviour. The <code class="docutils literal notranslate"><span class="pre">end=&quot;</span> <span class="pre">&quot;</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">print()</span></code> specifies that each print statement should end with a space instead of the default newline character (<code class="docutils literal notranslate"><span class="pre">\n</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 2 4 6 8 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="split">
+<h3>4. split()<a class="headerlink" href="#split" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">split()</span></code> function in Python is used to split a string into a list of substrings based on a specified delimiter. If no delimiter is specified, by default, it splits the string based on any whitespace characters (spaces, tabs, newlines).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
@@ -1071,6 +1312,7 @@ World!
 </div>
 </div>
 </div>
+<p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over each element in the list produced by <code class="docutils literal notranslate"><span class="pre">split()</span></code>, allowing you to process each substring individually.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">):</span>
@@ -1095,9 +1337,12 @@ World!
 <p>1234567</p>
 <p>12345678</p>
 </section>
+</section>
 <section id="exercise-3">
-<h1>Exercise 3<a class="headerlink" href="#exercise-3" title="Link to this heading">#</a></h1>
-<p>1. Sort</p>
+<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Link to this heading">#</a></h2>
+<section id="sort">
+<h3>1. Sort<a class="headerlink" href="#sort" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">sort()</span></code> method is used to sort lists. By default, <code class="docutils literal notranslate"><span class="pre">sort()</span></code> arranges elements in ascending order.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -1112,7 +1357,11 @@ World!
 </div>
 </div>
 </div>
-<p>2. Sort (decreasing order)</p>
+</section>
+<section id="sort-decreasing-order">
+<h3>2. Sort (decreasing order)<a class="headerlink" href="#sort-decreasing-order" title="Link to this heading">#</a></h3>
+<p>Passing <code class="docutils literal notranslate"><span class="pre">reverse=True</span></code> sorts elements in descending order.
+The <code class="docutils literal notranslate"><span class="pre">sort()</span></code> method modifies the list directly without returning a new list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -1127,7 +1376,10 @@ World!
 </div>
 </div>
 </div>
-<p>3. minimum</p>
+</section>
+<section id="minimum">
+<h3>3. minimum<a class="headerlink" href="#minimum" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">min()</span></code> function returns the smallest element in a sequence. It can be used directly with lists (or other iterables) to find the smallest element.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -1141,7 +1393,10 @@ World!
 </div>
 </div>
 </div>
-<p>4. maximum</p>
+</section>
+<section id="maximum">
+<h3>4. maximum<a class="headerlink" href="#maximum" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">max()</span></code> function returns the largest element in a sequence. It can be used directly with lists (or other iterables) to find the largest element.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -1155,8 +1410,11 @@ World!
 </div>
 </div>
 </div>
-<p>5. sorted()</p>
-<p>You can use the function if you do not wish to modify your initial list by sorting.</p>
+</section>
+<section id="sorted">
+<h3>5. sorted()<a class="headerlink" href="#sorted" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> function in Python can be used to create a new sorted list without modifying the original list. It allows you to obtain a sorted version of a list without altering the original list.</p>
+<p>This approach is useful when you need both the original unsorted list and a sorted version for different purposes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -1173,7 +1431,7 @@ World!
 </div>
 </div>
 </div>
-<p>Modify the code given below to display the five greatest unique numbers.</p>
+<p><strong>Question</strong> : Modify the code given below to display the five greatest unique numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
@@ -1190,13 +1448,16 @@ World!
 </div>
 </div>
 </div>
-<ol class="arabic simple" start="6">
-<li><p>reversed()</p></li>
-</ol>
+</section>
+<section id="reversed">
+<h3>6. reversed()<a class="headerlink" href="#reversed" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">reversed()</span></code> function reverses the order of elements in a sequence without modifying the original list. The result of <code class="docutils literal notranslate"><span class="pre">reversed()</span></code> is an iterator, which means it generates elements lazily as needed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
 <span class="n">a_reverse</span> <span class="o">=</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a_reverse</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">a_reverse</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
@@ -1204,7 +1465,8 @@ World!
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;list_reverseiterator object at 0x7f33fc863fa0&gt;
+15
 14
 13
 12
@@ -1212,9 +1474,11 @@ World!
 </div>
 </div>
 </div>
-<ol class="arabic simple" start="7">
-<li><p>zip()</p></li>
-</ol>
+</section>
+<section id="zip">
+<h3>7. zip()<a class="headerlink" href="#zip" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">zip()</span></code> function pairs elements from multiple iterables (lists, tuples, etc.) based on their positions. If the input iterables (<code class="docutils literal notranslate"><span class="pre">a1</span></code> and <code class="docutils literal notranslate"><span class="pre">b1</span></code> in the example below) have different lengths, <code class="docutils literal notranslate"><span class="pre">zip()</span></code> stops after the shortest one is exhausted.</p>
+<p><code class="docutils literal notranslate"><span class="pre">zip()</span></code> is commonly used for iterating over multiple lists simultaneously or for combining data from different sources into tuples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -1231,9 +1495,46 @@ World!
 </div>
 </div>
 </div>
-<ol class="arabic simple" start="8">
-<li><p>enumerate()</p></li>
-</ol>
+</section>
+<section id="enumerate">
+<h3>8. enumerate()<a class="headerlink" href="#enumerate" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> function in Python is used to add a counter to an iterable object (like a list, tuple, or string) and return it as an enumerate object.</p>
+<p>This enumerate object can then be used in loops or other iterations to obtain an indexed list of elements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">ezipped</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ezipped</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;enumerate object at 0x7f33fc8bfa00&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">ezipped</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">ezipped</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1
+1 2
+2 3
+3 4
+</pre></div>
+</div>
+</div>
+</div>
+<p>It can also be used with other functions seen above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -1250,7 +1551,10 @@ World!
 </div>
 </div>
 </div>
-<p>We can also use the function for strings.</p>
+</section>
+<section id="working-with-strings">
+<h3>9. Working with Strings<a class="headerlink" href="#working-with-strings" title="Link to this heading">#</a></h3>
+<p>We can also use these functions for working with strings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
@@ -1268,6 +1572,19 @@ World!
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">days</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">,</span> <span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">]</span>
 <span class="n">days_num</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">days</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">days_num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0, &#39;Sunday&#39;), (1, &#39;Monday&#39;), (2, &#39;Tuesday&#39;), (3, &#39;Wednesday&#39;), (4, &#39;Thursday&#39;), (5, &#39;Friday&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">enumerate(days,</span> <span class="pre">start=1)</span></code> creates an enumerate object that iterates over days, starting the index from 1 <code class="docutils literal notranslate"><span class="pre">(start=1)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">days</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">,</span> <span class="s2">&quot;Monday&quot;</span><span class="p">,</span> <span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span> <span class="s2">&quot;Thursday&quot;</span><span class="p">,</span> <span class="s2">&quot;Friday&quot;</span><span class="p">]</span>
 
 <span class="n">days_num</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">days</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">days_num</span><span class="p">)</span>
@@ -1275,16 +1592,18 @@ World!
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0, &#39;Sunday&#39;), (1, &#39;Monday&#39;), (2, &#39;Tuesday&#39;), (3, &#39;Wednesday&#39;), (4, &#39;Thursday&#39;), (5, &#39;Friday&#39;)]
-[(1, &#39;Sunday&#39;), (2, &#39;Monday&#39;), (3, &#39;Tuesday&#39;), (4, &#39;Wednesday&#39;), (5, &#39;Thursday&#39;), (6, &#39;Friday&#39;)]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1, &#39;Sunday&#39;), (2, &#39;Monday&#39;), (3, &#39;Tuesday&#39;), (4, &#39;Wednesday&#39;), (5, &#39;Thursday&#39;), (6, &#39;Friday&#39;)]
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+</section>
 <section id="exercise-4">
-<h1>Exercise 4<a class="headerlink" href="#exercise-4" title="Link to this heading">#</a></h1>
-<p>1. Dictionary</p>
+<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Link to this heading">#</a></h2>
+<section id="dictionary">
+<h3>1. Dictionary<a class="headerlink" href="#dictionary" title="Link to this heading">#</a></h3>
+<p>Dictionary represents an unordered collection of items where each item is a key-value pair. Keys must be unique and immutable (strings, numbers, tuples), while values can be of any data type and mutable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
@@ -1300,38 +1619,7 @@ World!
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The word &quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s2">&quot; apparait &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="s2">&quot; fois&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The word  joyful  apparait  12  fois
-The word  happy  apparait  12  fois
-The word  sad  apparait  2  fois
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The word &quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s2">&quot; apparait &quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="s2">&quot; fois&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The word  joyful  apparait  12  fois
-The word  happy  apparait  12  fois
-The word  sad  apparait  2  fois
-</pre></div>
-</div>
-</div>
-</div>
+<p>You can access (and even modify) the value associated with a key using <code class="docutils literal notranslate"><span class="pre">a[key]</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
@@ -1346,6 +1634,55 @@ The word  sad  apparait  2  fois
 </div>
 </div>
 </div>
+<p>Iterating over a dictionary directly iterates over its keys by default.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The word &quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s2">&quot; appears &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="s2">&quot; times&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The word  joyful  appears  12  times
+The word  happy  appears  12  times
+The word  sad  appears  2  times
+</pre></div>
+</div>
+</div>
+</div>
+<p>Directly sorting a dictionary with <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> sorts its keys and returns them as a list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;joy&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;happy&#39;, &#39;joy&#39;, &#39;joyful&#39;, &#39;sad&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using <code class="docutils literal notranslate"><span class="pre">.items()</span></code> allows you to iterate over key-value pairs of a dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The word &quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s2">&quot; appears &quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="s2">&quot; times&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The word  joyful  appears  12  times
+The word  happy  appears  12  times
+The word  sad  appears  2  times
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can delete an item from a dictionary using del followed by <code class="docutils literal notranslate"><span class="pre">a[key]</span></code>, where <code class="docutils literal notranslate"><span class="pre">key</span></code> is the key of the item you want to delete.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
@@ -1362,22 +1699,9 @@ The word  sad  apparait  2  fois
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;joy&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">mots</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;happy&#39;, &#39;joy&#39;, &#39;joyful&#39;, &#39;sad&#39;]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;joy&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
-<span class="n">mots_tuple</span> <span class="o">=</span> <span class="p">[(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">mots</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mots_tuple</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;joy&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+<span class="n">words_tuple</span> <span class="o">=</span> <span class="p">[(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">words</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words_tuple</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1387,14 +1711,18 @@ The word  sad  apparait  2  fois
 </div>
 </div>
 </div>
-<p>2. itemgetter</p>
+</section>
+<section id="itemgetter">
+<h3>2. itemgetter<a class="headerlink" href="#itemgetter" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">itemgetter</span></code> is a function from the operator module that is used to retrieve items or elements from an iterable object (like a list, tuple, or dictionary) based on their indices or keys. It returns a callable object that fetches the given item(s) from the provided object.</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">sorted()</span></code> with <code class="docutils literal notranslate"><span class="pre">itemgetter(1)</span></code> allows sorting a list of tuples by the second element (<code class="docutils literal notranslate"><span class="pre">value</span></code> in this case). Sorting operations do not modify the original dictionary or its contents but create a sorted list of tuples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
 
-<span class="n">mots</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;joy&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
-<span class="n">mots_tuple</span> <span class="o">=</span> <span class="p">[(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">mots</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">mots_tuple</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+<span class="n">words</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;joyful&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;joy&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+<span class="n">words_tuple</span> <span class="o">=</span> <span class="p">[(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">words</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">words_tuple</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -1404,18 +1732,21 @@ The word  sad  apparait  2  fois
 </div>
 </div>
 </div>
-<p>3. Interaction with user</p>
+</section>
+<section id="interaction-with-user">
+<h3>3. Interaction with user<a class="headerlink" href="#interaction-with-user" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">input()</span></code> function is used to accept user input from the console. The message inside <code class="docutils literal notranslate"><span class="pre">input()</span></code> serves as a prompt to guide the user on what to input.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># nom = input(&quot;Quel est votre nom?&quot;)</span>
-<span class="c1"># print(nom)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># name = input(&quot;What is your name?&quot;)</span>
+<span class="c1"># print(name)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># age = input(&quot;Quel est votre âge? &quot;)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># age = input(&quot;How old are you? &quot;)</span>
 <span class="c1"># print(age)</span>
 <span class="c1"># print(type(age))</span>
 </pre></div>
@@ -1424,7 +1755,7 @@ The word  sad  apparait  2  fois
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># age = input(&quot;Quel est votre âge? &quot;)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># age = input(&quot;How old are you?&quot;)</span>
 <span class="c1"># age = int(age)</span>
 <span class="c1"># print(age)</span>
 <span class="c1"># print(type(age))</span>
@@ -1447,9 +1778,12 @@ and display the following values for every module:</p>
 <li><p>minimum grade</p></li>
 </ul>
 </section>
+</section>
 <section id="exercise-5">
-<h1>Exercise 5<a class="headerlink" href="#exercise-5" title="Link to this heading">#</a></h1>
-<p>1. Files</p>
+<h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Link to this heading">#</a></h2>
+<section id="files">
+<h3>1. Files<a class="headerlink" href="#files" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">open()</span></code> function opens a file and returns a corresponding file object that allows you to interact with the file (read from it, write to it, etc.). The <code class="docutils literal notranslate"><span class="pre">read()</span></code> method reads data from an opened file. The write() method writes data to an opened file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
@@ -1475,6 +1809,7 @@ and display the following values for every module:</p>
 </div>
 </div>
 </div>
+<p>In Jupyter Notebook, the <code class="docutils literal notranslate"><span class="pre">?</span></code> symbol is used to access documentation and help for functions and objects. It is a shortcut to access the built-in help system in Python and Jupyter environments.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message1</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
@@ -1483,21 +1818,6 @@ and display the following values for every module:</p>
     <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">message1</span><span class="p">)</span>
     <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">message2</span><span class="p">)</span>
 <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Hello.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!Programming in Python
 </pre></div>
 </div>
 </div>
@@ -1525,7 +1845,46 @@ Programming in Python
 </div>
 </div>
 </div>
-<p>2. readline()</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>open
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>message1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>message2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Hello.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!
+Programming in Python
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="readline">
+<h3>2. readline()<a class="headerlink" href="#readline" title="Link to this heading">#</a></h3>
 <p>This function can be used to read a file line by line and not the complete happy in a single call like read()</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1539,6 +1898,7 @@ Programming in Python
 </div>
 </div>
 </div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">readline()</span></code> in a loop or iteratively to process each line of a file sequentially. It is useful for handling large files or files where processing each line independently is necessary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Hello.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
@@ -1600,11 +1960,12 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 <li><p>the minimum value of population</p></li>
 </ul>
 </section>
-<section id="exercise-6">
-<h1>Exercise 6<a class="headerlink" href="#exercise-6" title="Link to this heading">#</a></h1>
 </section>
-<section id="numpy">
-<h1>Numpy<a class="headerlink" href="#numpy" title="Link to this heading">#</a></h1>
+<section id="exercise-6">
+<h2>Exercise 6<a class="headerlink" href="#exercise-6" title="Link to this heading">#</a></h2>
+<p><strong>NumPy</strong>, a popular library for numerical computations, provides efficient ways to perform mathematical operations on arrays, including matrices. NumPy operations are optimized for performance, especially with large datasets.</p>
+<section id="importing-numpy">
+<h3>1. Importing Numpy<a class="headerlink" href="#importing-numpy" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1612,8 +1973,9 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 </div>
+</section>
 <section id="matrix-operations">
-<h2>Matrix operations<a class="headerlink" href="#matrix-operations" title="Link to this heading">#</a></h2>
+<h3>2. Matrix operations<a class="headerlink" href="#matrix-operations" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
@@ -1622,6 +1984,7 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 </div>
+<p>Matrix addition using <code class="docutils literal notranslate"><span class="pre">np.add()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
@@ -1633,8 +1996,12 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 6  8 10 12]
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 </div>
+</div>
+<p>Matrix subtraction using <code class="docutils literal notranslate"><span class="pre">np.subtract()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
@@ -1646,11 +2013,9 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-4 -4 -4 -4]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
 </div>
 </div>
-</div>
+<p>Matrix multiplication using <code class="docutils literal notranslate"><span class="pre">np.multiply()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
@@ -1660,9 +2025,6 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 5 12 21 32]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1718,28 +2080,25 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 <span class="n">moyen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">moyen</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.5
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="matrix-transposition">
-<h2>Matrix Transposition<a class="headerlink" href="#matrix-transposition" title="Link to this heading">#</a></h2>
+<h3>3. Matrix Transposition<a class="headerlink" href="#matrix-transposition" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
@@ -1762,12 +2121,14 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </section>
 <section id="split-a-matrix-to-two-horizontally-and-vertically">
-<h2>Split a matrix to two, horizontally and vertically<a class="headerlink" href="#split-a-matrix-to-two-horizontally-and-vertically" title="Link to this heading">#</a></h2>
+<h3>4. Split a matrix to two, horizontally and vertically<a class="headerlink" href="#split-a-matrix-to-two-horizontally-and-vertically" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">np.hsplit()</span></code> function splits an array horizontally (along columns) at the specified indices.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
+<span class="c1"># Split &#39;a&#39; horizontally at column index 2</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hsplit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 
 <span class="n">a1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1792,9 +2153,18 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>np.hsplit
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">np.vsplit()</span></code> function splits an array vertically (along rows) at the specified indices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
+<span class="c1"># Split &#39;a&#39; vertically at row index 2</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vsplit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 
 <span class="n">a1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1815,7 +2185,7 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </section>
 <section id="operations-on-two-dimensional-matrices">
-<h2>Operations on two-dimensional matrices<a class="headerlink" href="#operations-on-two-dimensional-matrices" title="Link to this heading">#</a></h2>
+<h3>5. Operations on two-dimensional matrices<a class="headerlink" href="#operations-on-two-dimensional-matrices" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
@@ -1886,24 +2256,31 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </section>
 <section id="change-the-shape-of-a-matrix">
-<h2>Change the shape of a matrix<a class="headerlink" href="#change-the-shape-of-a-matrix" title="Link to this heading">#</a></h2>
+<h3>6. Change the shape of a matrix<a class="headerlink" href="#change-the-shape-of-a-matrix" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b2</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">b2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">b2</span><span class="p">)</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">b2</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5 6 7 8]
  [5 6 7 8]]
+[[5 6]
+ [7 8]
+ [5 6]
+ [7 8]]
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="creation-of-a-matrix-with-random-numbers">
-<h2>Creation of a matrix with random numbers<a class="headerlink" href="#creation-of-a-matrix-with-random-numbers" title="Link to this heading">#</a></h2>
+<h3>7. Creation of a matrix with random numbers<a class="headerlink" href="#creation-of-a-matrix-with-random-numbers" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span>
@@ -1912,7 +2289,7 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7306136348220311
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6299107824586401
 </pre></div>
 </div>
 </div>
@@ -1925,7 +2302,7 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.39115482]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.55625663]
 </pre></div>
 </div>
 </div>
@@ -1938,8 +2315,8 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.83595689 0.88984324 0.86722    0.62738652 0.99720459]
- [0.65010333 0.63836679 0.61950921 0.80474979 0.18312558]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.25266014 0.20284753 0.85227507 0.95053019 0.68197498]
+ [0.23945951 0.27596537 0.43883516 0.27132795 0.9973348 ]]
 </pre></div>
 </div>
 </div>
@@ -1952,13 +2329,13 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[0.53241365 0.27173926 0.83202064]
-  [0.74121283 0.59488558 0.71960615]
-  [0.15507276 0.18334853 0.70393648]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[0.59904455 0.40821892 0.0506918 ]
+  [0.22353968 0.87700125 0.43383789]
+  [0.68482747 0.78360088 0.56042661]]
 
- [[0.93481316 0.526679   0.71698406]
-  [0.83894792 0.46999699 0.92803644]
-  [0.35593336 0.4399508  0.72131836]]]
+ [[0.47429996 0.2493717  0.1008032 ]
+  [0.47467021 0.59040083 0.29664777]
+  [0.20871387 0.11990601 0.57168343]]]
 </pre></div>
 </div>
 </div>
@@ -2003,6 +2380,7 @@ file population.csv from the <strong>data</strong> folder. The file contains the
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -2070,25 +2448,68 @@ file population.csv from the <strong>data</strong> folder. The file contains the
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Programming Session 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numpy">Numpy</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-operations">Matrix operations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transposition">Matrix Transposition</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-a-matrix-to-two-horizontally-and-vertically">Split a matrix to two, horizontally and vertically</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-two-dimensional-matrices">Operations on two-dimensional matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#change-the-shape-of-a-matrix">Change the shape of a matrix</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-a-matrix-with-random-numbers">Creation of a matrix with random numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#goals">Goals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1. Comments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">2. Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenation-of-two-strings">3. Concatenation of two strings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">4. Lists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples-non-modifiable-lists">5. Tuples (non-modifiable lists)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sets">6. Sets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#union">union()</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection">intersection()</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#difference">difference()</a></li>
 </ul>
 </li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-expressions">1. Conditional Expressions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-statement">The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-else-statement">The <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code> statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-if-elif-statement-without-else">The <code class="docutils literal notranslate"><span class="pre">if-elif</span></code> statement (without <code class="docutils literal notranslate"><span class="pre">else</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key Points:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loops">2. Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#range">3. Range</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split">4. split()</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort">1. Sort</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-decreasing-order">2. Sort (decreasing order)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimum">3. minimum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum">4. maximum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorted">5. sorted()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reversed">6. reversed()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">7. zip()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enumerate">8. enumerate()</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings">9. Working with Strings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">1. Dictionary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#itemgetter">2. itemgetter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interaction-with-user">3. Interaction with user</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#files">1. Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readline">2. readline()</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-numpy">1. Importing Numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-operations">2. Matrix operations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-transposition">3. Matrix Transposition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-a-matrix-to-two-horizontally-and-vertically">4. Split a matrix to two, horizontally and vertically</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations-on-two-dimensional-matrices">5. Operations on two-dimensional matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-the-shape-of-a-matrix">6. Change the shape of a matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-a-matrix-with-random-numbers">7. Creation of a matrix with random numbers</a></li>
+</ul>
+</li>
+</ul>
   </nav></div>
 
 </div></div>

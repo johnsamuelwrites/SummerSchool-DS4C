@@ -353,12 +353,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshots">Screenshots</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1 ★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2 ★</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes">Important Notes:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3 ★★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4 ★★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5 ★★★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6 ★★★</a></li>
 </ul>
             </nav>
         </div>
@@ -394,8 +397,8 @@ document.write(`
 </section>
 </section>
 <section id="exercise-1">
-<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
-<p>We first install the necessary packages.</p>
+<h2>Exercise 1 ★<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
+<p>We first install the necessary <a class="reference external" href="http://packages.In">packages.In</a> Jupyter notebooks, you can use the <code class="docutils literal notranslate"><span class="pre">!</span></code> command to run shell commands directly from a notebook cell. To install Python packages such as NumPy, pandas, you can use the following command:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>numpy<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>sparqlwrapper
@@ -407,27 +410,26 @@ document.write(`
 Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (2.2.2)
 Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (3.9.0)
 Requirement already satisfied: sparqlwrapper in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (2.0.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2.9.0.post0)
 Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2024.1)
 Requirement already satisfied: tzdata&gt;=2022.7 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from pandas) (2024.1)
 Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (1.2.1)
 Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (0.12.1)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (4.53.0)
 Requirement already satisfied: kiwisolver&gt;=1.3.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (1.4.5)
-Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (24.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (24.1)
 Requirement already satisfied: pillow&gt;=8 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (10.3.0)
 Requirement already satisfied: pyparsing&gt;=2.3.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from matplotlib) (3.1.2)
 Requirement already satisfied: rdflib&gt;=6.1.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from sparqlwrapper) (7.0.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)
+Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)
 Requirement already satisfied: isodate&lt;0.7.0,&gt;=0.6.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from rdflib&gt;=6.1.1-&gt;sparqlwrapper) (0.6.1)
 </pre></div>
 </div>
 </div>
 </div>
+<p>To import the NumPy, pandas libraries in a Jupyter notebook, you use the following Python import statements:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -438,6 +440,7 @@ Requirement already satisfied: isodate&lt;0.7.0,&gt;=0.6.0 in /opt/hostedtoolcac
 </div>
 </div>
 </div>
+<p>The <code class="docutils literal notranslate"><span class="pre">__version__</span> </code>attribute is a common way to access the version information of a Python package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
@@ -458,7 +461,7 @@ Requirement already satisfied: isodate&lt;0.7.0,&gt;=0.6.0 in /opt/hostedtoolcac
 </div>
 </section>
 <section id="exercise-2">
-<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h2>
+<h2>Exercise 2 ★<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h2>
 <p>Most of the time, we work with CSV (comma-separated values) files for
 data analysis. A CSV file consits of one or more lines and each line has
 one or more values separated by commas. One can consider every line as a
@@ -528,6 +531,26 @@ datatypes (U100, i4), where U100 corresponds to 100-character unicode string and
 </div>
 </div>
 </div>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code></strong>: This function loads data from a text file, with each row in the text file being converted to a NumPy array element.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">&quot;../data/pl.csv&quot;</span></code></strong>: The path to the CSV file. You need to change this to the actual path where your CSV file is located.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">dtype={&quot;names&quot;:</span> <span class="pre">(&quot;name&quot;,</span> <span class="pre">&quot;year&quot;),</span> <span class="pre">&quot;formats&quot;:</span> <span class="pre">(&quot;U100&quot;,</span> <span class="pre">&quot;i4&quot;)}</span></code></strong>: Specifies the data type for the resulting NumPy array. Here, <code class="docutils literal notranslate"><span class="pre">dtype</span></code> is defined as a dictionary with:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">names</span></code>: A tuple specifying the names of the columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formats</span></code>: A tuple specifying the data type of each column. <code class="docutils literal notranslate"><span class="pre">&quot;U100&quot;</span></code> stands for a Unicode string of maximum length 100, and <code class="docutils literal notranslate"><span class="pre">&quot;i4&quot;</span></code> stands for a 4-byte integer.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">skiprows=1</span></code></strong>: This parameter skips the first row of the CSV file, which is assumed to be the header.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">delimiter=&quot;,&quot;</span></code></strong>: Specifies the delimiter that separates the values in the CSV file. Here, it is a comma.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">encoding=&quot;UTF-8&quot;</span></code></strong>: Specifies the encoding of the file. UTF-8 is a common encoding for text files.</p></li>
+</ul>
+<section id="important-notes">
+<h3>Important Notes:<a class="headerlink" href="#important-notes" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>File Path</strong>: Ensure the file path (<code class="docutils literal notranslate"><span class="pre">&quot;../data/pl.csv&quot;</span></code>) is correct relative to your Jupyter notebook or script. You might need to adjust it depending on where your CSV file is located.</p></li>
+<li><p><strong>CSV File Structure</strong>: The CSV file should have a header row that matches the column names specified in the <code class="docutils literal notranslate"><span class="pre">dtype</span></code> parameter, and the data should follow in subsequent rows.</p></li>
+<li><p><strong>Column Data Types</strong>: Ensure that the data types (<code class="docutils literal notranslate"><span class="pre">&quot;U100&quot;</span></code> for strings and <code class="docutils literal notranslate"><span class="pre">&quot;i4&quot;</span></code> for integers) match the actual data in your CSV file.</p></li>
+</ol>
 <p><img alt="" src="practical2/images/numpycsv.png" /></p>
 <p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">CSV support in
 numpy</a>
@@ -609,6 +632,19 @@ tsv file.</p>
 <p>Note the changes in the above code compared to the previous one. A TSV
 file is a tab-separated file, i.e., the column values are separated by a
 tab ((\t)).</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code></strong>: This function loads data from a text file, with each row in the text file being converted to a NumPy array element.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">&quot;../data/pl.tsv&quot;</span></code></strong>: The path to the TSV file. You need to change this to the actual path where your TSV file is located.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">dtype={&quot;names&quot;:</span> <span class="pre">(&quot;name&quot;,</span> <span class="pre">&quot;year&quot;),</span> <span class="pre">&quot;formats&quot;:</span> <span class="pre">(&quot;U100&quot;,</span> <span class="pre">&quot;i4&quot;)}</span></code></strong>: Specifies the data type for the resulting NumPy array. Here, <code class="docutils literal notranslate"><span class="pre">dtype</span></code> is defined as a dictionary with:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">names</span></code>: A tuple specifying the names of the columns.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formats</span></code>: A tuple specifying the data type of each column. <code class="docutils literal notranslate"><span class="pre">&quot;U100&quot;</span></code> stands for a Unicode string of maximum length 100, and <code class="docutils literal notranslate"><span class="pre">&quot;i4&quot;</span></code> stands for a 4-byte integer.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">skiprows=1</span></code></strong>: This parameter skips the first row of the TSV file, which is assumed to be the header.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">delimiter=&quot;\t&quot;</span></code></strong>: Specifies the delimiter that separates the values in the TSV file. Here, it is a tab character.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">encoding=&quot;UTF-8&quot;</span></code></strong>: Specifies the encoding of the file. UTF-8 is a common encoding for text files.</p></li>
+</ul>
 <p>For counting the number of rows in your dataset, you can use <code class="docutils literal notranslate"><span class="pre">len()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -636,8 +672,9 @@ tab ((\t)).</p>
 </div>
 </div>
 </section>
+</section>
 <section id="exercise-3">
-<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Link to this heading">#</a></h2>
+<h2>Exercise 3 ★★<a class="headerlink" href="#exercise-3" title="Link to this heading">#</a></h2>
 <p>Most of the external data sources may provide their data in JSON format.
 Our next exercise is to parse JSON files. Copy the file
 <a class="reference internal" href="#../../data/pl.json"><span class="xref myst">pl.json</span></a> to
@@ -690,6 +727,24 @@ Take a look at <a class="reference external" href="https://pandas.pydata.org/pan
 </div>
 </div>
 </div>
+<p>This code is using Python’s pandas library to work with JSON data.</p>
+<p>*. <strong>Imports</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">pandas</span> <span class="pre">import</span> <span class="pre">json_normalize</span></code>: Imports the <code class="docutils literal notranslate"><span class="pre">json_normalize</span></code> function from the pandas library. This function is used to flatten JSON data into a DataFrame.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code>: Imports the pandas library with the alias <code class="docutils literal notranslate"><span class="pre">pd</span></code>, which is a common convention.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">json</span></code>: Imports Python’s built-in <code class="docutils literal notranslate"><span class="pre">json</span></code> module for handling JSON data.</p></li>
+</ul>
+<p>*. <strong>Loading JSON Data</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">=</span> <span class="pre">json.load(open(&quot;../data/pl.json&quot;))</span></code>: Opens a JSON file located at <code class="docutils literal notranslate"><span class="pre">&quot;../data/pl.json&quot;</span></code> and loads its contents into the <code class="docutils literal notranslate"><span class="pre">data</span></code> variable. The <code class="docutils literal notranslate"><span class="pre">json.load()</span></code> function reads the JSON file and parses it into a Python dictionary.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Normalizing JSON into a DataFrame</strong>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataframe</span> <span class="pre">=</span> <span class="pre">json_normalize(data)</span></code>: Uses the <code class="docutils literal notranslate"><span class="pre">json_normalize()</span></code> function from pandas to convert the nested JSON data (<code class="docutils literal notranslate"><span class="pre">data</span></code>) into a flat table-like structure called a DataFrame. This step is particularly useful for analyzing structured JSON data where nested objects or arrays need to be represented in tabular form.</p></li>
+</ul>
+</li>
+</ul>
 <p>And the output without <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1225,7 +1280,7 @@ dtype: object
 </div>
 </section>
 <section id="exercise-4">
-<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Link to this heading">#</a></h2>
+<h2>Exercise 4 ★★<a class="headerlink" href="#exercise-4" title="Link to this heading">#</a></h2>
 <p>In this exercise, we will take a look at how to download data from
 external data sources using special query interfaces. Take for example,
 above data was obtained from <a class="reference external" href="https://query.wikidata.org/">Wikidata query</a>:**
@@ -1265,11 +1320,11 @@ this
 3   1946  Von Neumann and Goldstine graphing system
 4   1948                          CPC Coding scheme
 ..   ...                                        ...
-95  1967                                        XPL
+95  1967                                       Logo
 96  1967                 Space Programming Language
 97  1968                                      Refal
-98  1968                                      PILOT
-99  1968                                     MAPPER
+98  1968                                      FOCAL
+99  1968                                      PILOT
 
 [100 rows x 2 columns]
 </pre></div>
@@ -1339,7 +1394,7 @@ this
     <tr>
       <th>95</th>
       <td>1967</td>
-      <td>XPL</td>
+      <td>Logo</td>
     </tr>
     <tr>
       <th>96</th>
@@ -1354,18 +1409,96 @@ this
     <tr>
       <th>98</th>
       <td>1968</td>
-      <td>PILOT</td>
+      <td>FOCAL</td>
     </tr>
     <tr>
       <th>99</th>
       <td>1968</td>
-      <td>MAPPER</td>
+      <td>PILOT</td>
     </tr>
   </tbody>
 </table>
 <p>100 rows × 2 columns</p>
 </div></div></div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>100.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>1958.300000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>6.500194</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1942.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1952.750000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>1959.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1964.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1968.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">dataframe.describe()</span></code> method in pandas generates descriptive statistics that summarize the central tendency, dispersion, and shape of a dataset’s distribution. Here’s what each part typically includes:</p>
+<ol class="arabic simple">
+<li><p><strong>Count</strong>: Number of non-null observations (rows) in each column.</p></li>
+<li><p><strong>Mean</strong>: Average value of each numerical column.</p></li>
+<li><p><strong>Std (Standard Deviation)</strong>: Measures the dispersion or spread of the values in each numerical column.</p></li>
+<li><p><strong>Min</strong>: The smallest value in each numerical column.</p></li>
+<li><p><strong>25% (Percentile)</strong>: The value below which 25% of the observations fall (1st quartile).</p></li>
+<li><p><strong>50% (Median)</strong>: The median or 50th percentile.</p></li>
+<li><p><strong>75% (Percentile)</strong>: The value below which 75% of the observations fall (3rd quartile).</p></li>
+<li><p><strong>Max</strong>: The largest value in each numerical column.</p></li>
+</ol>
+<p>When you call <code class="docutils literal notranslate"><span class="pre">describe()</span></code> on a pandas DataFrame (<code class="docutils literal notranslate"><span class="pre">dataframe</span></code> in this case), it analyzes only the numerical columns by default and provides the statistical summary for each of these columns. Non-numerical columns are ignored unless specifically included by using additional parameters.</p>
+<p>This method is useful for quickly getting an overview of your dataset’s numeric values, identifying outliers, understanding the distribution of your data, and more.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -1402,6 +1535,13 @@ Name: languageLabel, dtype: object
 </div>
 </div>
 </div>
+<p>The <code class="docutils literal notranslate"><span class="pre">dataframe.dtypes</span></code> attribute in pandas returns the data types of each column in the DataFrame <code class="docutils literal notranslate"><span class="pre">dataframe</span></code>. It provides information about how pandas has interpreted the data from the JSON (or any other source) based on its initial reading and normalization process. Here’s what you’ll typically see:</p>
+<ul class="simple">
+<li><p><strong>Numeric Types</strong>: Integers (<code class="docutils literal notranslate"><span class="pre">int64</span></code>), Floating-point numbers (<code class="docutils literal notranslate"><span class="pre">float64</span></code>).</p></li>
+<li><p><strong>Object Type</strong>: Typically strings (<code class="docutils literal notranslate"><span class="pre">object</span></code>), but can also include other Python objects.</p></li>
+<li><p><strong>DateTime Types</strong>: If applicable, pandas will recognize and label date/time data appropriately (<code class="docutils literal notranslate"><span class="pre">datetime64</span></code>).</p></li>
+<li><p><strong>Categorical Types</strong>: If pandas identifies a column with a small number of unique values, it may assign it a <code class="docutils literal notranslate"><span class="pre">category</span></code> dtype, which can optimize memory usage and speed up certain operations.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">dtypes</span>
@@ -1418,7 +1558,7 @@ dtype: object
 </div>
 </section>
 <section id="exercise-5">
-<h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Link to this heading">#</a></h2>
+<h2>Exercise 5 ★★★<a class="headerlink" href="#exercise-5" title="Link to this heading">#</a></h2>
 <p>This exercise will use some basic data analyses. Continuing with
 the code in Exercise 1.4, le’s count the number of programming
 languages released in a year.</p>
@@ -1556,6 +1696,7 @@ languages released in a year.</p>
 </table>
 </div></div></div>
 </div>
+<p>The above code creates a new DataFrame <code class="docutils literal notranslate"><span class="pre">grouped</span></code> by grouping the original DataFrame <code class="docutils literal notranslate"><span class="pre">dataframe</span></code> based on the values in the column named “year”, and then counting the occurrences in each group.</p>
 <p>You can also use multiple aggregate functions using agg()</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1964,7 +2105,7 @@ article: title, main subject and publication year.</p>
   FILTER(lang(?title)=&quot;en&quot; &amp;&amp;
      lang(?subjectLabel)=&quot;en&quot; &amp;&amp; ?year&gt;2010)
 }
-LIMIT 10000
+LIMIT 5000
 </pre></div>
 </div>
 <p>Now, compute and display the following information (using various
@@ -1983,26 +2124,8 @@ the above query results) since 2010.</p></li>
 <p><strong>Note</strong>: If you get time-out errors, please change the LIMIT to some lower values (1000, 2000, 5000).</p>
 </section>
 <section id="exercise-6">
-<h2>Exercise 6<a class="headerlink" href="#exercise-6" title="Link to this heading">#</a></h2>
+<h2>Exercise 6 ★★★<a class="headerlink" href="#exercise-6" title="Link to this heading">#</a></h2>
 <p>In our final exercise, we will query Wikidata and obtain the URLs of the images. Then we will download these images.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>sparqlwrapper
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sparqlwrapper in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (2.0.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rdflib&gt;=6.1.1 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from sparqlwrapper) (7.0.0)
-Requirement already satisfied: isodate&lt;0.7.0,&gt;=0.6.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from rdflib&gt;=6.1.1-&gt;sparqlwrapper) (0.6.1)
-Requirement already satisfied: pyparsing&lt;4,&gt;=2.1.0 in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from rdflib&gt;=6.1.1-&gt;sparqlwrapper) (3.1.2)
-Requirement already satisfied: six in /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages (from isodate&lt;0.7.0,&gt;=0.6.0-&gt;rdflib&gt;=6.1.1-&gt;sparqlwrapper) (1.16.0)
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -2011,11 +2134,11 @@ Requirement already satisfied: six in /opt/hostedtoolcache/Python/3.10.14/x64/li
 <span class="n">endpoint_url</span> <span class="o">=</span> <span class="s2">&quot;https://query.wikidata.org/sparql&quot;</span>
 
 <span class="c1"># Get cities</span>
-<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT DISTINCT ?grandeville ?grandevilleLabel ?pays ?paysLabel ?image {</span>
-<span class="s2">  ?grandeville wdt:P31 wd:Q1549591;</span>
-<span class="s2">               wdt:P17 ?pays;</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;SELECT DISTINCT ?bigcity ?bigcityLabel ?country ?countryLabel ?image {</span>
+<span class="s2">  ?bigcity wdt:P31 wd:Q1549591;</span>
+<span class="s2">               wdt:P17 ?country;</span>
 <span class="s2">               wdt:P18 ?image.</span>
-<span class="s2"> SERVICE wikibase:label { bd:serviceParam wikibase:language &quot;fr&quot;. }</span>
+<span class="s2"> SERVICE wikibase:label { bd:serviceParam wikibase:language &quot;en&quot;. }</span>
 <span class="s2">}</span>
 <span class="s2">LIMIT 10&quot;&quot;&quot;</span>
 
@@ -2037,8 +2160,8 @@ Requirement already satisfied: six in /opt/hostedtoolcache/Python/3.10.14/x64/li
 <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="s2">&quot;bindings&quot;</span><span class="p">]:</span>
     <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
         <span class="p">(</span>
-            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;grandevilleLabel&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">],</span>
-            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;paysLabel&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">],</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;bigcityLabel&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">],</span>
+            <span class="n">result</span><span class="p">[</span><span class="s2">&quot;countryLabel&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">],</span>
             <span class="n">result</span><span class="p">[</span><span class="s2">&quot;image&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">],</span>
         <span class="p">)</span>
     <span class="p">)</span>
@@ -2048,9 +2171,9 @@ Requirement already satisfied: six in /opt/hostedtoolcache/Python/3.10.14/x64/li
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ville&quot;</span><span class="p">,</span> <span class="s2">&quot;pays&quot;</span><span class="p">,</span> <span class="s2">&quot;image&quot;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="s2">&quot;country&quot;</span><span class="p">,</span> <span class="s2">&quot;image&quot;</span><span class="p">])</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
-    <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;ville&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">,</span> <span class="s2">&quot;pays&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">,</span> <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">}</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">,</span> <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">,</span> <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;U200&quot;</span><span class="p">}</span>
 <span class="p">)</span>
 <span class="n">dataframe</span>
 </pre></div>
@@ -2075,70 +2198,70 @@ Requirement already satisfied: six in /opt/hostedtoolcache/Python/3.10.14/x64/li
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>ville</th>
-      <th>pays</th>
+      <th>city</th>
+      <th>country</th>
       <th>image</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>Dakar</td>
-      <td>Sénégal</td>
+      <td>Sofia</td>
+      <td>Bulgaria</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Addis-Abeba</td>
-      <td>Éthiopie</td>
+      <td>Nizhny Novgorod</td>
+      <td>Russia</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Tripoli</td>
-      <td>Libye</td>
+      <td>Bordeaux</td>
+      <td>France</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Asmara</td>
-      <td>Érythrée</td>
+      <td>Toronto</td>
+      <td>Canada</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Neuss</td>
-      <td>Allemagne</td>
+      <td>Plovdiv</td>
+      <td>Bulgaria</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Göttingen</td>
-      <td>Allemagne</td>
+      <td>Vilnius</td>
+      <td>Lithuania</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Chillán</td>
-      <td>Chili</td>
+      <td>Rennes</td>
+      <td>France</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Witten</td>
-      <td>Allemagne</td>
+      <td>Lille</td>
+      <td>France</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>Praia</td>
-      <td>Cap-Vert</td>
+      <td>Modena</td>
+      <td>Italy</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>Tambov</td>
-      <td>Russie</td>
+      <td>Ufa</td>
+      <td>Russia</td>
       <td>http://commons.wikimedia.org/wiki/Special:File...</td>
     </tr>
   </tbody>
@@ -2261,12 +2384,15 @@ Name: image, dtype: int64
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshots">Screenshots</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1 ★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2 ★</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes">Important Notes:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3 ★★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4 ★★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5 ★★★</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6">Exercise 6 ★★★</a></li>
 </ul>
   </nav></div>
 
